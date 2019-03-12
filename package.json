@@ -1,0 +1,26 @@
+{
+  "name": "blog-nuxt",
+  "version": "1.0.0",
+  "description": "A simple blog for Nuxt and Vue",
+  "author": "Phil Snow",
+  "private": true,
+  "scripts": {
+    "dev": "cross-env NODE_ENV=development nodemon server/index.js --watch server",
+    "build": "nuxt build",
+    "start": "cross-env NODE_ENV=production node server/index.js",
+    "generate": "nuxt generate"
+  },
+  "dependencies": {
+    "cookies": "^0.7.3",
+    "cross-env": "^5.2.0",
+    "express": "^4.16.4",
+    "nuxt": "^2.4.0",
+    "prismic-javascript": "^2.0.1",
+    "prismic-vue": "git+https://github.com/prismicio/prismic-vue.git#nuxt"
+  },
+  "devDependencies": {
+    "node-sass": "^4.11.0",
+    "nodemon": "^1.18.9",
+    "sass-loader": "^7.1.0"
+  }
+}
