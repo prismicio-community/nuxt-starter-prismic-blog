@@ -17,12 +17,6 @@ export default {
     const url = await api.previewSession(previewToken, LinkResolver, '/')
     redirect(url)
   },
-  // async created() {
-  //   let previewToken = this.$route.query.token
-  //   const api = await Prismic.getApi(PrismicConfig.apiEndpoint)
-  //   const url = await api.previewSession(previewToken, LinkResolver, '/')
-  //   window.location.replace(url)
-  // }
 }
 </script>
 
