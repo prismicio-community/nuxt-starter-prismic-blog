@@ -1,4 +1,5 @@
 const pkg = require('./package')
+const PrismicConfig = require('./prismic.config')
 
 module.exports = {
   mode: 'universal',
@@ -17,7 +18,7 @@ module.exports = {
       { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }
     ],
     script: [
-      { innerHTML: '{ window.prismic = { endpoint: "https://vuejs-blog-example.cdn.prismic.io/api/v2"} }' },
+      { innerHTML: '{ window.prismic = { endpoint: "' + PrismicConfig.apiEndpoint + '"} }' },
       { src: '//static.cdn.prismic.io/prismic.min.js' }
     ],
     __dangerouslyDisableSanitizers: ['script'],
