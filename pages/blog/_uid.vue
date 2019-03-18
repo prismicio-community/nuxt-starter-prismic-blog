@@ -32,7 +32,7 @@
 
 <script>
 import Prismic from "prismic-javascript"
-import PrismicConfig from "~/prismic-configuration.js"
+import PrismicConfig from "~/prismic.config.js"
 //Importing all the slices components
 import TextSlice from '~/components/slices/TextSlice.vue'
 import QuoteSlice from '~/components/slices/QuoteSlice.vue'

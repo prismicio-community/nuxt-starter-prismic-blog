@@ -1,5 +1,5 @@
 const pkg = require('./package')
-const PrismicConfig = require('./prismic-configuration')
+const PrismicConfig = require('./prismic.config')
 
 module.exports = {
   mode: 'universal',

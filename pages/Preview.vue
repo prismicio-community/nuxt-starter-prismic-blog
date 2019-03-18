@@ -7,7 +7,7 @@
 <script>
 import Prismic from "prismic-javascript"
 import LinkResolver from "~/plugins/link-resolver.js"
-import PrismicConfig from "~/prismic-configuration.js"
+import PrismicConfig from "~/prismic.config.js"
 
 export default {
   name: 'Preview',
