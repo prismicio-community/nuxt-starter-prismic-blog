@@ -97,7 +97,7 @@ img
   font-size: 14px
   color: #949494
 
-/* Media Queries
+// Media Queries
 @media (max-width: 767px)
   .blog-header
     padding: 5px
@@ -105,7 +105,7 @@ img
       width: 80%
 
 @media screen and (min-width: 768px)
-  /* Blog post images
+  // Blog post images
   .block-img.emphasized
     width: 130%
     margin: 0 -15% 2rem -15%

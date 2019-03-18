@@ -4,14 +4,18 @@
       <div class="back">
         <nuxt-link to="../">back to list</nuxt-link>
       </div>
+      <!-- Button to edit document in dashboard -->
       <prismic-edit-button :documentId="documentId"/>
-      <prismic-rich-text class="blog-title" :field="document.title"/>
-      <p class="blog-post-meta"><span class="created-at">{{ document.date }}</span></p>
+      <!-- Template for page title -->
+      <h1 class="blog-title">{{ $prismic.richTextAsPlain(document.title) }}</h1>
+      <!-- Template for published date -->
+      <p class="blog-post-meta"><span class="created-at">{{ Intl.DateTimeFormat('en-US', dateOptions).format(new Date(document.date)) }}</span></p>
     </div>
     <!-- Slice section template -->
     <section v-for="(slice, index) in slices" :key="'slice-' + index">
       <!-- Text slice template -->
       <template v-if="slice.slice_type === 'text'">
+        <!-- Here :slice="slice" passes the data to the component -->
         <text-slice :slice="slice"></text-slice>
       </template>
       <!-- Quote slice template -->
@@ -29,6 +33,7 @@
 <script>
 import Prismic from "prismic-javascript"
 import PrismicConfig from "~/prismic.config.js"
+//Importing all the slices components
 import TextSlice from '~/components/slices/TextSlice.vue'
 import QuoteSlice from '~/components/slices/QuoteSlice.vue'
 import ImageCaptionSlice from '~/components/slices/ImageCaptionSlice.vue'
@@ -42,26 +47,29 @@ export default {
   },
   head () {
     return {
-      title: 'Post'
+      title: 'Prismic Nuxt.js Blog'
     }
   },
   async asyncData({ params, error, req }) {
     try{
+      // Query to get API object
       const api = await Prismic.getApi(PrismicConfig.apiEndpoint, {req})
 
-      //Query to get post content
-      const result = await api.getByUID("post", params.uid)
+      // Query to get post content
+      const post = await api.getByUID("post", params.uid)
 
       // Load the edit button
       if (process.client) window.prismic.setupEditButton()
 
+      // Returns data to be used in template
       return {
-        document: result.data,
-        documentId: result.id,
-        slices: result.data.body,
+        document: post.data,
+        documentId: post.id,
+        slices: post.data.body,
+        dateOptions: { year: 'numeric', month: 'short', day: '2-digit' },
       }
     } catch (e) {
-      //returns error page
+      // Returns error page
       error({ statusCode: 404, message: 'Page not found' })
     }
   },
@@ -70,29 +78,6 @@ export default {
 </script>
 
 <style lang="sass" scoped>
-.outer-container
-  max-width: 700px
-  margin-left: auto
-  margin-right: auto
-  padding: 20px 0
-
-.back
-  color: #9A9A9A
-  display: block
-  max-width: 700px
-  margin: 0 auto 2em auto
-  font-family: 'Lato', sans-serif
-  font-size: 16px
-  &:before
-    content: '←'
-    display: inline-block
-    position: relative
-    margin-right: 8px
-  a
-    color: #9A9A9A
-    &:hover
-      text-decoration: underline
-
 .blog-main.single a
   text-decoration: none
   background: -webkit-linear-gradient(top, rgba(0, 0, 0, 0) 75%, rgba(0, 0, 0, 0.8) 75%)
@@ -103,8 +88,6 @@ export default {
 
 .blog-post
   margin-bottom: 3rem
-  h2
-    margin: 0
 
 .blog-post-meta
   color: #9A9A9A
@@ -119,10 +102,6 @@ export default {
   h1
     font-size: 36px
     line-height: 45px
-  h2
-    font-size: 28px
-  h3
-    font-size: 18px
   .blog-post-meta
     font-size: 16px
 

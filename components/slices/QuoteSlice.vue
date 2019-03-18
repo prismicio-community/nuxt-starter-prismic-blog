@@ -16,8 +16,6 @@ export default {
 <style lang="sass" scoped>
 .post-part
   &.single
-    .image-full-width + .image-label
-      width: 100%
     .block-quotation
       margin-bottom: 2rem
       display: inline-block
@@ -32,21 +30,18 @@ export default {
       font-style: italic
       border-left: solid #B4B4B4 4px
       padding-left: 10px
-  li
-    list-style-type: initial
-    margin-left: 1em
 
-@media screen and (min-width: 768px)
-  .post-part.single .block-quotation, .blog-main.single .block-quotation
+@media screen and (min-width: 975px)
+  .block-quotation
     width: 130%
     margin: 0 -15% 2rem -15%
     font-size: 30px
     padding: 0
-  .post-part.single .block-citation, .blog-main.single .block-citation
+  .block-citation
     margin: 20px 0
 
 @media (max-width: 767px)
-  .post-part, .blog-main
+  .post-part
     font-size: 18px
   .post-part pre
     font-size: 14px

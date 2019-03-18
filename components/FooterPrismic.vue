@@ -34,5 +34,5 @@ export default {
     margin-bottom: 0
 
 .logo
-  width: 140px
+  width: 100px
 </style>

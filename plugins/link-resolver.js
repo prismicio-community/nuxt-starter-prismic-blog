@@ -8,7 +8,7 @@ export default function (doc) {
   }
 
   if (doc.type === 'blog_home') {
-    return '/blog'
+    return '/'
   }
 
   if (doc.type === 'post') {

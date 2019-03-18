@@ -16,6 +16,7 @@
     "cross-env": "^5.2.0",
     "express": "^4.16.4",
     "nuxt": "^2.4.0",
+    "prismic-dom": "^2.1.0",
     "prismic-javascript": "^2.0.1",
     "prismic-vue": "git+https://github.com/prismicio/prismic-vue.git#nuxt"
   },

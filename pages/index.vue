@@ -1,16 +1,22 @@
 <template>
   <section class="home">
     <article>
+      <!-- Button to edit document in dashboard -->
       <prismic-edit-button :documentId="documentId"/>
       <div class="blog-avatar" :style="{ backgroundImage: 'url(' + image + ')' }" ></div>
-      <prismic-rich-text :field="document.headline"/>
-      <prismic-rich-text class="blog-description" :field="document.description"/>
+      <!-- Template for page title -->
+      <h1 class="blog-title">
+        {{ $prismic.richTextAsPlain(homepageContent.headline) }}
+      </h1>
+      <!-- Template for page description -->
+      <p class="blog-description">{{ $prismic.richTextAsPlain(homepageContent.description) }}</p>
       
       <!-- Check blog posts exist -->
       <div v-if="posts.length !== 0" class="blog-main">
         <!-- Template for blog posts -->
         <section v-for="post in posts" :key="post.id" v-bind:post="post" class="blog-post">
-          <blog-posts :post="post"></blog-posts>
+          <!-- Here :post="post" passes the data to the component -->
+          <blog-widget :post="post"></blog-widget>
         </section>
       </div>
       <!-- If no blog posts return message -->
@@ -24,43 +30,46 @@
 <script>
 import Prismic from "prismic-javascript"
 import PrismicConfig from "~/prismic.config.js"
-import BlogPosts from '../components/BlogPosts.vue'
+// Importing blog posts widget
+import BlogWidget from '~/components/BlogWidget.vue'
 
 export default {
   name: 'Home',
   components: {
-    BlogPosts
+    BlogWidget
   },
   head () {
     return {
-      title: 'Home Page',
+      title: 'Prismic Nuxt.js Blog',
     }
   },
   async asyncData({context, error, req}) {
     try{
+      // Query to get API object
       const api = await Prismic.getApi(PrismicConfig.apiEndpoint, {req})
 
-      let document = {}
-      const result = await api.getSingle('blog_home')
-      document = result.data
+      // Query to get blog home content
+      const document = await api.getSingle('blog_home')
+      let homepageContent = document.data
 
-      let posts = {};
-      const blog = await api.query(
+      // Query to get posts content to preview
+      const blogPosts = await api.query(
         Prismic.Predicates.at("document.type", "post"),
         { orderings : '[my.post.date desc]' }
       )
-      posts = blog.results
 
       // Load the edit button
       if (process.client) window.prismic.setupEditButton()
 
+      // Returns data to be used in template
       return {
-        document,
-        documentId: result.id,
-        posts,
-        image: document.image.url,
+        homepageContent,
+        documentId: document.id,
+        posts: blogPosts.results,
+        image: homepageContent.image.url,
       }
     } catch (e) {
+      // Returns error page
       error({ statusCode: 404, message: 'Page not found' })
     }
   },
@@ -113,12 +122,6 @@ export default {
   h1
     font-size: 36px
     line-height: 45px
-  h2
-    font-size: 28px
-  h3
-    font-size: 18px
-  .blog-post-meta
-    font-size: 16px
   .blog-main
     padding: 0
     font-size: 18px
