@@ -29,7 +29,7 @@
 
 <script>
 import Prismic from "prismic-javascript"
-import PrismicConfig from "~/prismic.config.js"
+import PrismicConfig from "~/prismic-configuration.js"
 // Importing blog posts widget
 import BlogWidget from '~/components/BlogWidget.vue'
 
