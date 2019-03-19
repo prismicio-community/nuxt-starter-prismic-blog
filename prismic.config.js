@@ -1,5 +1,5 @@
 var api = {
-  apiEndpoint: 'https://your-repo-name.prismic.io/api',
+  apiEndpoint: "https://sample-blog-v2.prismic.io/api/v2",
 }
 
 module.exports = api;

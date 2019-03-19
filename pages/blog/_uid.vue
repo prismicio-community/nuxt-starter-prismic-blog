@@ -76,36 +76,3 @@ export default {
 
 }
 </script>
-
-<style lang="sass" scoped>
-.blog-main.single a
-  text-decoration: none
-  background: -webkit-linear-gradient(top, rgba(0, 0, 0, 0) 75%, rgba(0, 0, 0, 0.8) 75%)
-  background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 75%, rgba(0, 0, 0, 0.8) 75%)
-  background-repeat: repeat-x
-  background-size: 2px 2px
-  background-position: 0 23px
-
-.blog-post
-  margin-bottom: 3rem
-
-.blog-post-meta
-  color: #9A9A9A
-  font-family: 'Lato', sans-serif
-  margin-bottom: 8px
-
-@media (max-width: 767px)
-  .outer-container
-    padding: 0 20px
-  .post-part pre
-    font-size: 14px
-  h1
-    font-size: 36px
-    line-height: 45px
-  .blog-post-meta
-    font-size: 16px
-
-@media screen and (min-width: 768px)
-  .blog-post-meta
-    font-size: 16px
-</style>

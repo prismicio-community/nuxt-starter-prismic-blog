@@ -119,9 +119,6 @@ export default {
 @media (max-width: 767px)
   .home
     padding: 0 20px
-  h1
-    font-size: 36px
-    line-height: 45px
   .blog-main
     padding: 0
     font-size: 18px

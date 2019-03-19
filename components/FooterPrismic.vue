@@ -1,10 +1,8 @@
 <template>
   <footer class="footer">
-    <p>
-      <a href="https://prismic.io" target="_blank" rel="noopener">
-        <img class="logo" src="../assets/img/prismic-logo.svg" alt="Prismic">
-      </a>
-    </p>
+    <a href="https://prismic.io" target="_blank" rel="noopener">
+      <img class="logo" src="../assets/img/prismic-logo.svg" alt="Prismic">
+    </a>
   </footer>
 </template>
 
@@ -16,22 +14,11 @@ export default {
 
 <style lang="sass" scoped>
 .footer
+  padding: 40px 0
   max-width: 700px
-  padding: 0 
-  margin: auto
-  color: #9A9A9A
-  font-family: 'Lato', sans-serif
-  font-size: 16px
-  font-style: italic
+  margin: 0 auto
   text-align: center
-  min-height: 20vh
-  @media (max-width: 767px)
-    padding: 0 20px
-  
-  p
-    border-top: 1px solid #DADADA
-    padding: 2rem 0
-    margin-bottom: 0
+  border-top: 1px solid #DADADA
 
 .logo
   width: 100px

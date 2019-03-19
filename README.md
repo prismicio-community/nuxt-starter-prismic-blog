@@ -1,10 +1,10 @@
 # Prismic Nuxt.js Example Blog
 
-> [Vue.js](https://vuejs.org) example blog project with content managed in [Prismic](https://prismic.io)
+> [Nuxt.js](https://nuxtjs.org) example blog project with content managed in [Prismic](https://prismic.io)
 
 ## Check out our article for a step by step guide to getting this project up and running
 
-> [Prismic project guide](https://intercom.help/prismicio/examples/vue-js-samples/sample-blog-with-api-based-cms-in-nuxtjs)
+> [Prismic project guide](https://prismic.io/docs/vuejs/getting-started/primsic-nuxt )
 
 Then you can access it at [http://localhost:3000](http://localhost:3000).
 
@@ -26,7 +26,7 @@ npm start
 
 ### generates static project
 ``` bash
-npm run generate
+nuxt generate
 ```
 
 

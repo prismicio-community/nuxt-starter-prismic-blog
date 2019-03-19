@@ -16,7 +16,7 @@ export default {
   data: function() {
     return {
       link: '',
-      dateOptions: { year: 'numeric', month: 'short', day: '2-digit' },
+      dateOptions: '',
     }
   },
   name: 'blog-widget',
@@ -50,7 +50,8 @@ export default {
     },
   },
   created () {
-    this.link = LinkResolver(this.post)
+    this.link = LinkResolver(this.post),
+    this.dateOptions = { year: 'numeric', month: 'short', day: '2-digit' }
   },
 }
 </script>
@@ -61,19 +62,4 @@ export default {
 
 h2
   margin: 0
-
-.blog-post-meta
-  font-family: 'Lato', sans-serif
-  margin-bottom: 8px
-  color: #9A9A9A
-
-@media (max-width: 767px)
-  h2
-    font-size: 28px
-  .blog-post-meta
-    font-size: 16px
-
-@media screen and (min-width: 768px)
-  .blog-post-meta
-    font-size: 16px
 </style>
