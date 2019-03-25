@@ -9,7 +9,7 @@
       <!-- Template for page title -->
       <h1 class="blog-title">{{ $prismic.richTextAsPlain(document.title) }}</h1>
       <!-- Template for published date -->
-      <p class="blog-post-meta"><span class="created-at">{{ Intl.DateTimeFormat('en-US', dateOptions).format(new Date(document.date)) }}</span></p>
+      <p class="blog-post-meta"><span class="created-at">{{ formattedDate }}</span></p>
     </div>
     <!-- Slice section template -->
     <section v-for="(slice, index) in slices" :key="'slice-' + index">
@@ -66,7 +66,7 @@ export default {
         document: post.data,
         documentId: post.id,
         slices: post.data.body,
-        dateOptions: { year: 'numeric', month: 'short', day: '2-digit' },
+        formattedDate: Intl.DateTimeFormat('en-US', { year: 'numeric', month: 'short', day: '2-digit' }).format(new Date(post.data.date)),
       }
     } catch (e) {
       // Returns error page

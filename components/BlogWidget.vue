@@ -2,7 +2,7 @@
   <nuxt-link :to="link">
     <div class="blog-post">
       <h2>{{ $prismic.richTextAsPlain(post.data.title) }}</h2>
-      <p class="blog-post-meta"><span class="created-at">{{ Intl.DateTimeFormat('en-US', dateOptions).format(new Date(post.data.date)) }}</span></p>
+      <p class="blog-post-meta"><span class="created-at">{{ formattedDate }}</span></p>
       <p>{{getFirstParagraph(post)}}</p>
     </div>
   </nuxt-link>
@@ -16,7 +16,7 @@ export default {
   data: function() {
     return {
       link: '',
-      dateOptions: '',
+      formattedDate: '',
     }
   },
   name: 'blog-widget',
@@ -51,7 +51,7 @@ export default {
   },
   created () {
     this.link = LinkResolver(this.post),
-    this.dateOptions = { year: 'numeric', month: 'short', day: '2-digit' }
+    this.formattedDate = Intl.DateTimeFormat('en-US', { year: 'numeric', month: 'short', day: '2-digit' }).format(new Date(this.post.data.date))
   },
 }
 </script>
