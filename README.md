@@ -4,12 +4,10 @@
 
 ## Check out our article for a step by step guide to getting this project up and running
 
-> [Prismic project guide](https://prismic.io/docs/vuejs/getting-started/primsic-nuxt )
-
-Then you can access it at [http://localhost:3000](http://localhost:3000).
+> [Prismic project guide](https://user-guides.prismic.io/examples/create-a-sample-blog-with-prismic-and-nuxtjs)
 
 
-## How to launch this project in your local environment
+## Launch this project in your local environment
 
 Run the following commands:
 
@@ -17,22 +15,20 @@ Run the following commands:
 npm install
 npm run dev
 ```
+Then you can access it at [http://localhost:3000](http://localhost:3000).
 
-### Compiles and minifies for production and launches server
+## Launching the project in production
+
+Run the following commands to compile and minify the project and launch the server for production:
+
 ``` bash
 npm run build
 npm start
 ```
 
-### generates static project
-``` bash
-nuxt generate
-```
-
-
 ## Learn more about using Prismic with Nuxt.js
 
-> [Prismic Nuxt.js Documentation](https://prismic.io/docs/vuejs/beyond-the-api/primsic-nuxt)
+> [Prismic Nuxt.js Documentation](https://prismic.io/docs/vuejs/getting-started/prismic-nuxt)
 
 ## License
 
