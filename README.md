@@ -4,7 +4,7 @@
 
 ## Check out our article for a step by step guide to getting this project up and running
 
-> [Prismic project guide](https://user-guides.prismic.io/examples/create-a-sample-blog-with-prismic-and-nuxtjs)
+> [Prismic project guide](https://user-guides.prismic.io/examples#nuxt-js-samples)
 
 
 ## Launch this project in your local environment
