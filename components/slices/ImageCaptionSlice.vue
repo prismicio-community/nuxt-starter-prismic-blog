@@ -24,10 +24,10 @@
   </div>
 </template>
 
-
 <script>
 export default {
   props: ['slice'],
+  name: 'image-caption-slice',
   data: function() {
     return {
       img: '',
@@ -35,7 +35,6 @@ export default {
       size: '',
     }
   },
-  name: 'image-caption-slice',
   created () {
     this.img = this.slice.primary.image
     this.caption = this.slice.primary.caption

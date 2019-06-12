@@ -11,22 +11,8 @@
       <!-- Template for published date -->
       <p class="blog-post-meta"><span class="created-at">{{ formattedDate }}</span></p>
     </div>
-    <!-- Slice section template -->
-    <section v-for="(slice, index) in slices" :key="'slice-' + index">
-      <!-- Text slice template -->
-      <template v-if="slice.slice_type === 'text'">
-        <!-- Here :slice="slice" passes the data to the component -->
-        <text-slice :slice="slice"></text-slice>
-      </template>
-      <!-- Quote slice template -->
-      <template v-else-if="slice.slice_type === 'quote'">
-        <quote-slice :slice="slice"></quote-slice>
-      </template>
-      <!-- Image with caption slice template -->
-      <template v-else-if="slice.slice_type === 'image_with_caption'">
-        <image-caption-slice :slice="slice"></image-caption-slice>
-      </template>
-    </section>
+    <!-- Slice Block Componenet tag -->
+    <slices-block :slices="slices"/>
   </div>
 </template>
 
@@ -34,16 +20,12 @@
 import Prismic from "prismic-javascript"
 import PrismicConfig from "~/prismic.config.js"
 //Importing all the slices components
-import TextSlice from '~/components/slices/TextSlice.vue'
-import QuoteSlice from '~/components/slices/QuoteSlice.vue'
-import ImageCaptionSlice from '~/components/slices/ImageCaptionSlice.vue'
+import SlicesBlock from '~/components/SlicesBlock.vue'
 
 export default {
   name: 'post',
   components: {
-    TextSlice,
-    QuoteSlice,
-    ImageCaptionSlice
+    SlicesBlock
   },
   head () {
     return {
