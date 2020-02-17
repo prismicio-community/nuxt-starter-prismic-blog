@@ -1,15 +1,13 @@
 <template>
   <section class="home">
     <article>
-      <!-- Button to edit document in dashboard -->
-      <prismic-edit-button :documentId="documentId"/>
       <div class="blog-avatar" :style="{ backgroundImage: 'url(' + image + ')' }" ></div>
       <!-- Template for page title -->
       <h1 class="blog-title">
-        {{ $prismic.richTextAsPlain(homepageContent.headline) }}
+        {{ $prismic.asText(homepageContent.headline) }}
       </h1>
       <!-- Template for page description -->
-      <p class="blog-description">{{ $prismic.richTextAsPlain(homepageContent.description) }}</p>
+      <p class="blog-description">{{ $prismic.asText(homepageContent.description) }}</p>
       
       <!-- Check blog posts exist -->
       <div v-if="posts.length !== 0" class="blog-main">
@@ -28,8 +26,6 @@
 </template>
 
 <script>
-import Prismic from "prismic-javascript"
-import PrismicConfig from "~/prismic.config.js"
 // Importing blog posts widget
 import BlogWidget from '~/components/BlogWidget.vue'
 
@@ -43,28 +39,20 @@ export default {
       title: 'Prismic Nuxt.js Blog',
     }
   },
-  async asyncData({context, error, req}) {
+  async asyncData({ $prismic, error }) {
     try{
-      // Query to get API object
-      const api = await Prismic.getApi(PrismicConfig.apiEndpoint, {req})
-
       // Query to get blog home content
-      const document = await api.getSingle('blog_home')
-      let homepageContent = document.data
+      const homepageContent = (await $prismic.api.getSingle('blog_home')).data
 
       // Query to get posts content to preview
-      const blogPosts = await api.query(
-        Prismic.Predicates.at("document.type", "post"),
+      const blogPosts = await $prismic.api.query(
+        $prismic.predicates.at("document.type", "post"),
         { orderings : '[my.post.date desc]' }
       )
-
-      // Load the edit button
-      if (process.client) window.prismic.setupEditButton()
 
       // Returns data to be used in template
       return {
         homepageContent,
-        documentId: document.id,
         posts: blogPosts.results,
         image: homepageContent.image.url,
       }

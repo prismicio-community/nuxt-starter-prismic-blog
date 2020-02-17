@@ -1,28 +1,20 @@
-const pkg = require('./package')
-const PrismicConfig = require('./prismic.config')
-
-module.exports = {
+export default {
   mode: 'universal',
 
   /*
   ** Headers of the page
   */
   head: {
-    title: pkg.name,
+    title: 'Prismic + Nuxt Blog example',
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
-      { hid: 'description', name: 'description', content: pkg.description }
+      { hid: 'description', name: 'description', content: 'Prismic + Nuxt Blog example' }
     ],
     link: [
       { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
       { rel: 'stylesheet', href: 'https://fonts.googleapis.com/css?family=Lato:300,400,700,900' }
-    ],
-    script: [
-      { innerHTML: '{ window.prismic = { endpoint: "' + PrismicConfig.apiEndpoint + '"} }' },
-      { src: '//static.cdn.prismic.io/prismic.min.js' }
-    ],
-    __dangerouslyDisableSanitizers: ['script'],
+    ]
   },
 
   /*
@@ -42,15 +34,24 @@ module.exports = {
   ** Plugins to load before mounting the App
   */
   plugins: [
-    '~/plugins/link-resolver.js',
-    '~/plugins/prismic-vue.js',
   ],
 
   /*
   ** Nuxt.js modules
   */
   modules: [
+    // modules for full static before `nuxt export` (coming in v2.12)
+    '@/modules/static',
+    '@/modules/crawler',
+    // https://prismic-nuxt.js.org/
+    '@nuxtjs/prismic'
   ],
+
+  prismic: {
+    endpoint: 'https://prismic-blog-demo.cdn.prismic.io/api/v2',
+    linkResolver: '@/plugins/link-resolver',
+    htmlSerializer: '@/plugins/html-serializer',
+  },
 
   /*
   ** Build configuration
@@ -62,5 +63,9 @@ module.exports = {
     extend(config, ctx) {
       config.resolve.alias['vue'] = 'vue/dist/vue.common'
     }
+  },
+
+  generate: {
+    fallback: '404.html' // Netlify reads a 404.html, Nuxt will load as an SPA
   }
 }

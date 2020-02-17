@@ -1,7 +1,7 @@
 <template>
   <div class='post-part single container'>
     <blockquote class="block-quotation">
-      {{ $prismic.richTextAsPlain(slice.primary.quote) }}
+      {{ $prismic.asText(slice.primary.quote) }}
     </blockquote>
   </div>
 </template>

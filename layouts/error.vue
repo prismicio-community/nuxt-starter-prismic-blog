@@ -8,10 +8,10 @@
     <nuxt-link to="/" style="text-decoration: underline;">Return to home</nuxt-link>
   </div>
 </template>
+
 <script>
 export default {
   props: ['error'],
-  layout: 'default',
   head () {
     return {
       title: 'Prismic Nuxt.js Blog',
