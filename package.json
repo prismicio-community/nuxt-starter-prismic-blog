@@ -12,17 +12,17 @@
     "heroku-postbuild": "npm run build"
   },
   "dependencies": {
-    "@nuxtjs/prismic": "^1.1.0",
+    "@nuxtjs/prismic": "^1.2.4",
     "cookies": "^0.8.0",
     "cross-env": "^5.2.1",
-    "nuxt": "^2.11.0",
-    "prismic-javascript": "^2.1.5",
-    "prismic-vue": "^2.0.0"
+    "nuxt": "^2.14.6",
+    "prismic-javascript": "^2.7.1",
+    "prismic-vue": "^2.0.1"
   },
   "devDependencies": {
     "node-sass": "^4.13.1",
     "nodemon": "^1.19.4",
     "sass-loader": "^7.3.1",
-    "webpack": "^4.41.6"
+    "webpack": "^4.44.2"
   }
 }
