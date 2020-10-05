@@ -6,24 +6,23 @@
 
 > [Prismic project guide](https://user-guides.prismic.io/examples/nuxt-js-samples/create-a-sample-blog-with-prismic-and-nuxt)
 
-
 ## Launch this project in your local environment
 
 Run the following commands:
 
-``` bash
+```bash
 npm install
 npm run dev
 ```
+
 Then you can access it at [http://localhost:3000](http://localhost:3000).
 
-## Launching the project in production
+## Deploying the project to production
 
-Run the following commands to compile and minify the project and launch the server for production:
+When you deploy on your static hosting provider (like Netlify, Vercel, or Heroku), this is your build command:
 
-``` bash
-npm run build
-npm start
+```
+npm run generate
 ```
 
 ## Learn more about using Prismic with Nuxt.js
