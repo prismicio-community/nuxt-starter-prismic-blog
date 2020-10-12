@@ -9,7 +9,7 @@
       <!-- Template for published date -->
       <p class="blog-post-meta"><span class="created-at">{{ formattedDate }}</span></p>
     </div>
-    <!-- Slice Block Componenet tag -->
+    <!-- Slice Block Component tag -->
     <slices-block :slices="slices"/>
   </div>
 </template>
