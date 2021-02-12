@@ -1,29 +1,9 @@
-# Prismic & NuxtJS Example Blog
+# Prismic & Nuxt.js Example Blog
 
 > [Nuxt.js](https://nuxtjs.org) example blog project with content managed in [Prismic](https://prismic.io)
 
 ## Check out the dedicated article to get this project up and running
 > [Prismic project guide](https://user-guides.prismic.io/examples/nuxt-js-samples/create-a-sample-blog-with-prismic-and-nuxt)
-
-### 1. Install the prismic-cli
-```
-npm install -g prismic-cli
-```
-### 2. Run the theme command
-This will create a new Prismic content repository, setup the custom types, and install the project code
-
-```
-prismic theme --theme-url https://github.com/prismicio/nuxtjs-blog --conf nuxt.config.js
-```
-
-###  3. Run the project
-```
-npm run dev  
-```
-Then you can access it at [http://localhost:3000](http://localhost:3000).
-
-### Deploys made easy with Netlify
-Sign up to [Netlify](https://www.netlify.com/) and follow the [deployment documentation](https://www.netlify.com/tags/deploy/) to quickly deploy your project.
 
 ## Learn more about using Prismic with Nuxt.js
 
