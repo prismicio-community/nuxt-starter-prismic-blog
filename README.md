@@ -1,39 +1,19 @@
-# Prismic Nuxt.js Example Blog
+# Prismic & Nuxt.js Example Blog
 
 > [Nuxt.js](https://nuxtjs.org) example blog project with content managed in [Prismic](https://prismic.io)
 
-## Check out our article for a step by step guide to getting this project up and running
-
+## Check out the dedicated article to get this project up and running
 > [Prismic project guide](https://user-guides.prismic.io/examples/nuxt-js-samples/create-a-sample-blog-with-prismic-and-nuxt)
-
-## Launch this project in your local environment
-
-Run the following commands:
-
-```bash
-npm install
-npm run dev
-```
-
-Then you can access it at [http://localhost:3000](http://localhost:3000).
-
-## Deploying the project to production
-
-When you deploy on your static hosting provider (like Netlify, Vercel, or Heroku), this is your build command:
-
-```
-npm run generate
-```
 
 ## Learn more about using Prismic with Nuxt.js
 
-> [Prismic Nuxt.js Documentation](https://prismic.io/docs/vuejs/getting-started/prismic-nuxt)
+> [Prismic Nuxt.js Documentation](https://prismic.io/docs/technologies/nuxtjs)
 
 ## License
 
 This software is licensed under the Apache 2 license, quoted below.
 
-Copyright 2013-2019 Prismic (http://prismic.io).
+Copyright 2021 [Prismic](http://prismic.io/).
 
 Licensed under the Apache License, Version 2.0 (the "License"); you may not use this project except in compliance with the License. You may obtain a copy of the License at http://www.apache.org/licenses/LICENSE-2.0.
 
