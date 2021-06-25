@@ -1,6 +1,6 @@
 {
   "id": "post",
-  "name": "Post",
+  "label": "Post",
   "repeatable": true,
   "json": {
     "Blog Post" : {
