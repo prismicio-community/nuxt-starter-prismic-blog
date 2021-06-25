@@ -1,6 +1,6 @@
 {
   "id": "blog_home",
-  "name": "Blog Home",
+  "label": "Blog Home",
   "repeatable": false,
   "json": {
     "Main" : {
