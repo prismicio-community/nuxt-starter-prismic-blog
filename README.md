@@ -3,7 +3,7 @@
 > [Nuxt.js](https://nuxtjs.org) example blog project with content managed in [Prismic](https://prismic.io)
 
 ## Check out the dedicated article to get this project up and running
-> [Prismic project guide](https://user-guides.prismic.io/examples/nuxt-js-samples/create-a-sample-blog-with-prismic-and-nuxt)
+> [Prismic project guide](https://prismic.io/docs/technologies/getting-started-examples-simple-nuxtjs)
 
 ## Learn more about using Prismic with Nuxt.js
 
