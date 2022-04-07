@@ -1,0 +1,11 @@
+{
+  "slices": {
+    "ImageWithCaption": {},
+    "Quote": {},
+    "Text": {}
+  },
+  "_cts": {
+    "post": {},
+    "blog-home": {}
+  }
+}

@@ -1,0 +1,24 @@
+[
+  {
+    "variation": "default",
+    "name": "Default",
+    "slice_type": "image_with_caption",
+    "items": [],
+    "primary": {
+      "title": [
+        {
+          "type": "heading1",
+          "text": "Implement visionary synergies",
+          "spans": []
+        }
+      ],
+      "description": [
+        {
+          "type": "paragraph",
+          "text": "Velit enim officia velit dolore. Nostrud pariatur dolore adipisicing magna consectetur officia dolor. Ut nulla nisi quis minim non amet adipisicing excepteur velit eu mollit commodo in mollit elit.",
+          "spans": []
+        }
+      ]
+    }
+  }
+]

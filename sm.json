@@ -1,0 +1,7 @@
+{
+  "_latest": "0.3.4",
+  "apiEndpoint": "https://nuxt-starter-prismic-blog.prismic.io/api/v2",
+  "localSliceSimulatorURL": "http://localhost:3000/slice-simulator",
+  "libraries": ["@/slices"]
+}
+
