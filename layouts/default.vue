@@ -12,11 +12,5 @@
 </template>
 
 <script>
-export default {
-  head() {
-    return {
-      title: "Prismic + Nuxt blog example",
-    };
-  },
-};
+export default {};
 </script>

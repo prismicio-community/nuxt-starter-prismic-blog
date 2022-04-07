@@ -1,21 +1,14 @@
 [
   {
-    "variation": "default",
-    "name": "Default",
+    "variation": "default-slice",
+    "name": "Default slice",
     "slice_type": "quote",
     "items": [],
     "primary": {
-      "title": [
-        {
-          "type": "heading1",
-          "text": "Envisioneer magnetic partnerships",
-          "spans": []
-        }
-      ],
-      "description": [
+      "quote": [
         {
           "type": "paragraph",
-          "text": "Nostrud minim aliquip laborum adipisicing non cillum anim enim anim. Anim pariatur consectetur fugiat cillum.",
+          "text": "Ad tempor dolore nisi minim laborum laborum. Id tempor Lorem nisi adipisicing commodo nisi nisi. Fugiat non sint do Lorem ullamco consectetur occaecat proident aliquip ullamco et ullamco excepteur.",
           "spans": []
         }
       ]
