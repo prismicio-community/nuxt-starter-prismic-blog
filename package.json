@@ -1,25 +1,22 @@
 {
-  "name": "nuxtjs-blog",
-  "description": "Sample blog built with Nuxt.js using Prismic headless CMS",
-  "author": "Prismic",
+  "name": "nuxt-starter-prismic-blog",
+  "private": "true",
   "scripts": {
     "dev": "nuxt",
     "build": "nuxt build",
-    "start": "cross-env NODE_ENV=production node server/index.js",
-    "generate": "nuxt generate"
+    "generate": "nuxt generate",
+    "start": "nuxt start",
+    "format": "prettier --write ."
   },
   "dependencies": {
-    "@nuxtjs/prismic": "^1.3.1",
-    "cookies": "^0.8.0",
-    "cross-env": "^5.2.1",
-    "nuxt": "^2.15.3"
+    "nuxt": "^2.15.8"
   },
   "devDependencies": {
-    "sass": "^1.41.1",
-    "sass-loader": "^10.2.0"
-  },
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/prismicio/nuxtjs-blog"
+    "@nuxt/postcss8": "^1.1.3",
+    "autoprefixer": "^10.4.4",
+    "postcss": "^8.4.12",
+    "prettier": "^2.6.2",
+    "prettier-plugin-tailwindcss": "^0.1.8",
+    "tailwindcss": "^3.0.23"
   }
 }
