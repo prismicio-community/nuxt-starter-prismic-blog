@@ -1,21 +1,14 @@
 [
   {
-    "variation": "default",
-    "name": "Default",
+    "variation": "default-slice",
+    "name": "Default slice",
     "slice_type": "text",
     "items": [],
     "primary": {
-      "title": [
-        {
-          "type": "heading1",
-          "text": "Expedite distributed initiatives",
-          "spans": []
-        }
-      ],
-      "description": [
+      "text": [
         {
           "type": "paragraph",
-          "text": "Quis sunt voluptate eiusmod enim exercitation irure quis consectetur eiusmod excepteur cupidatat nulla laborum dolore qui. Elit labore minim velit.",
+          "text": "Fugiat ea velit anim eu pariatur ipsum qui sint mollit nostrud velit magna commodo culpa fugiat.",
           "spans": []
         }
       ]

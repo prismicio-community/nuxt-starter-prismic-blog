@@ -6,7 +6,7 @@ export default {
 }
 
 
-export const _Default = () => ({
+export const _DefaultSlice = () => ({
   components: {
     MyComponent,
     SliceZone
@@ -18,9 +18,9 @@ export const _Default = () => ({
   },
   data() {
     return {
-      mock: {"variation":"default","name":"Default","slice_type":"text","items":[],"primary":{"title":[{"type":"heading1","text":"Expedite distributed initiatives","spans":[]}],"description":[{"type":"paragraph","text":"Quis sunt voluptate eiusmod enim exercitation irure quis consectetur eiusmod excepteur cupidatat nulla laborum dolore qui. Elit labore minim velit.","spans":[]}]},"id":"_Default"}
+      mock: {"variation":"default-slice","name":"Default slice","slice_type":"text","items":[],"primary":{"text":[{"type":"paragraph","text":"Fugiat ea velit anim eu pariatur ipsum qui sint mollit nostrud velit magna commodo culpa fugiat.","spans":[]}]},"id":"_DefaultSlice"}
     }
   },
   template: '<SliceZone :slices="[mock]" :resolver="resolve" />'
 })
-_Default.storyName = 'Default'
+_DefaultSlice.storyName = 'Default slice'
