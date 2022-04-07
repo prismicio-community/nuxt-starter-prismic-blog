@@ -16,7 +16,7 @@
 import { components } from "~/slices";
 
 export default {
-  data: function () {
+  data() {
     return { components };
   },
   async asyncData({ $prismic, params, error }) {
@@ -29,7 +29,7 @@ export default {
     }
   },
   computed: {
-    title: function () {
+    title() {
       return this.$prismic.asText(this.post.data.title) || "Untitled";
     },
   },

@@ -3,20 +3,19 @@
     <figure class="grid gap-4">
       <div
         v-if="hasImage"
-        :class="
-          slice.variation === 'fullWidthImage'
-            ? '-mx-6 md:mx-0 md:-mx-[calc((100vw-100%)/2)]'
-            : '-mx-6 md:mx-0'
-        "
+        class="-mx-6 md:mx-0"
+        :class="{
+          'md:-mx-[calc((100vw-100%)/2)]': slice.variation === 'fullWidthImage'
+        }"
       >
         <PrismicImage :field="slice.primary.image" />
       </div>
-      <figcaption
+      <PrismicText
         v-if="hasCaption"
+        :field="slice.primary.caption"
+        wrapper="figcaption"
         class="text-center font-serif text-xs italic text-neutral-400 md:text-sm"
-      >
-        <PrismicText :field="slice.primary.caption" />
-      </figcaption>
+      />
     </figure>
   </section>
 </template>
@@ -29,10 +28,10 @@ export default {
   // The array passed to `getSliceComponentProps` is purely optional and acts as a visual hint for you
   props: getSliceComponentProps(["slice", "index", "slices", "context"]),
   computed: {
-    hasImage: function () {
+    hasImage() {
       return Boolean(this.slice.primary.image.url);
     },
-    hasCaption: function () {
+    hasCaption() {
       return Boolean(this.slice.primary.caption);
     },
   },

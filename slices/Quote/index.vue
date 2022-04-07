@@ -3,12 +3,7 @@
     <blockquote
       class="relative font-serif text-2xl italic leading-relaxed lg:-mx-20"
     >
-      <span class="pointer-events-none absolute top-0 -left-3 select-none"
-        >&ldquo;</span
-      ><PrismicText :field="slice.primary.quote" wrapper="span" /><span
-        class="pointer-events-none select-none"
-        >&rdquo;</span
-      >
+      <span class="pointer-events-none absolute top-0 -left-3 select-none">&ldquo;</span><PrismicText :field="slice.primary.quote" wrapper="span" /><span class="pointer-events-none select-none">&rdquo;</span>
     </blockquote>
   </section>
 </template>

@@ -14,10 +14,5 @@
 <script>
 export default {
   props: ["error"],
-  head() {
-    return {
-      title: "Prismic + Nuxt blog example",
-    };
-  },
 };
 </script>

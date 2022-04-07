@@ -2,7 +2,7 @@
   <div class="grid gap-2">
     <h2 class="text-2xl font-black md:text-3xl">
       <PrismicLink :field="post">
-        <PrismicText :field="post.data.title" />
+        {{ $prismic.asText(post.data.title) }}
       </PrismicLink>
     </h2>
 
