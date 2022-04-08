@@ -5,7 +5,7 @@
         v-if="hasImage"
         class="-mx-6 md:mx-0"
         :class="{
-          'md:-mx-[calc((100vw-100%)/2)]': slice.variation === 'fullWidthImage'
+          'md:-mx-[calc((100vw-100%)/2)]': slice.variation === 'fullWidthImage',
         }"
       >
         <PrismicImage :field="slice.primary.image" />

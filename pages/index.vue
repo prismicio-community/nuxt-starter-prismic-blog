@@ -1,11 +1,13 @@
 <template>
   <div>
+    <SetUpRepo v-if="!blogHome" />
     <HomeHeader
+      v-if="blogHome"
       :image="blogHome.data.image"
       :headline="blogHome.data.headline"
       :description="blogHome.data.description"
     />
-    <div class="py-12 md:py-16">
+    <div v-if="blogHome" class="py-12 md:py-16">
       <PostList :posts="posts" />
     </div>
   </div>
