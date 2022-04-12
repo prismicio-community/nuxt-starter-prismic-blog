@@ -17,7 +17,7 @@ To start a new project using this starter, run the following command in your ter
 
 ```sh
 npx prismic-cli@latest theme \
-  --theme-url https://github.com/prismicio-community/nuxtjs-blog \
+  --theme-url https://github.com/prismicio-community/nuxt-starter-prismic-blog \
   --conf sm.json
 ```
 
