@@ -7,7 +7,7 @@ This sample blog is an excellent starting point to explore [Nuxt][nuxt] and [Pri
 
 &nbsp;
 
-<img src="https://user-images.githubusercontent.com/8601064/162551419-bc7534ea-83ff-4253-ab77-0055e4ea4435.png" alt="Screenshots of the site seen on deskop and mobile browsers" width="600" />
+<img src="https://user-images.githubusercontent.com/8601064/162868106-f3359eeb-0949-4a86-82ec-4bd461828ef7.png" alt="Screenshots of the site seen on deskop and mobile browsers" />
 
 &nbsp;
 
