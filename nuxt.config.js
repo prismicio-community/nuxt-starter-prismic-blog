@@ -1,71 +1,68 @@
+import sm from "./sm.json";
+
 export default {
+  // Target: https://go.nuxtjs.dev/config-target
   target: "static",
 
-  /*
-   ** Headers of the page
-   */
+  // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
-    title: "Prismic + Nuxt Blog example",
+    title: "Prismic + Nuxt blog example",
+    htmlAttrs: {
+      lang: "en",
+    },
     meta: [
       { charset: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
       {
         hid: "description",
         name: "description",
-        content: "Prismic + Nuxt Blog example"
-      }
+        content: "Prismic + Nuxt blog example",
+      },
+      { name: "format-detection", content: "telephone=no" },
     ],
-    link: [
-      { rel: "icon", type: "image/x-icon", href: "/favicon.ico" },
-      {
-        rel: "stylesheet",
-        href: "https://fonts.googleapis.com/css?family=Lato:300,400,700,900"
-      }
-    ]
+    link: [{ rel: "icon", type: "image/png", href: "/favicon.png" }],
   },
 
-  /*
-   ** Customize the progress-bar color
-   */
-  loading: { color: "#fff" },
+  // Modules for dev and build (recommended): https://go.nuxtjs.dev/config-modules
+  buildModules: ["@nuxt/postcss8", "@nuxtjs/prismic"],
 
-  /*
-   ** Global CSS
-   */
-  css: ["@/assets/css/resetr.css", "@/assets/css/common.css"],
+  build: {
+    postcss: {
+      plugins: {
+        tailwindcss: {},
+        autoprefixer: {},
+      },
+    },
+    transpile: ["@prismicio/vue"],
+  },
 
-  /*
-   ** Plugins to load before mounting the App
-   */
-  plugins: [{ src: "~/plugins/prismicLinks", ssr: false }],
-
-  /*
-   ** Nuxt.js modules
-   */
-  modules: [
-    // https://prismic-nuxt.js.org/
-    "@nuxtjs/prismic"
+  // Global CSS: https://go.nuxtjs.dev/config-css
+  css: [
+    "@/styles/global.css",
+    "@fontsource/lato/400.css",
+    "@fontsource/lato/700.css",
+    "@fontsource/lato/900.css",
+    "@fontsource/libre-baskerville/400.css",
+    "@fontsource/libre-baskerville/700.css",
   ],
 
+  // Auto import components: https://go.nuxtjs.dev/config-components
+  components: true,
+
   prismic: {
-    endpoint: "https://your-repo-name.cdn.prismic.io/api/v2",
-    linkResolver: "@/plugins/link-resolver",
-    htmlSerializer: "@/plugins/html-serializer"
+    endpoint: sm.apiEndpoint,
+    modern: true,
+    apiOptions: {
+      routes: [
+        {
+          type: "blog-home",
+          path: "/",
+        },
+        {
+          type: "post",
+          path: "/blog/:uid",
+        },
+      ],
+    },
   },
-
-  /*
-   ** Build configuration
-   */
-  build: {
-    /*
-     ** You can extend webpack config here
-     */
-    extend(config, ctx) {
-      config.resolve.alias["vue"] = "vue/dist/vue.common";
-    }
-  },
-
-  generate: {
-    fallback: "404.html" // Netlify reads a 404.html, Nuxt will load as an SPA
-  }
 };

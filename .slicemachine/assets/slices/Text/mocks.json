@@ -1,0 +1,17 @@
+[
+  {
+    "variation": "default-slice",
+    "name": "Default slice",
+    "slice_type": "text",
+    "items": [],
+    "primary": {
+      "text": [
+        {
+          "type": "paragraph",
+          "text": "Fugiat ea velit anim eu pariatur ipsum qui sint mollit nostrud velit magna commodo culpa fugiat.",
+          "spans": []
+        }
+      ]
+    }
+  }
+]

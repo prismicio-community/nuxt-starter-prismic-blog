@@ -1,0 +1,37 @@
+{
+  "slices": {
+    "ImageWithCaption": {
+      "default-slice": {
+        "primary": {}
+      }
+    },
+    "Quote": {
+      "default-slice": {
+        "primary": {
+          "quote": {
+            "config": {
+              "patternType": "PARAGRAPH",
+              "blocks": 1
+            }
+          }
+        }
+      }
+    },
+    "Text": {
+      "default-slice": {
+        "primary": {
+          "text": {
+            "config": {
+              "patternType": "PARAGRAPH",
+              "blocks": 1
+            }
+          }
+        }
+      }
+    }
+  },
+  "_cts": {
+    "post": {},
+    "blog-home": {}
+  }
+}

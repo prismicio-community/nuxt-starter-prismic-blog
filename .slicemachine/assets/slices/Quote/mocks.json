@@ -1,0 +1,17 @@
+[
+  {
+    "variation": "default-slice",
+    "name": "Default slice",
+    "slice_type": "quote",
+    "items": [],
+    "primary": {
+      "quote": [
+        {
+          "type": "paragraph",
+          "text": "Ad tempor dolore nisi minim laborum laborum. Id tempor Lorem nisi adipisicing commodo nisi nisi. Fugiat non sint do Lorem ullamco consectetur occaecat proident aliquip ullamco et ullamco excepteur.",
+          "spans": []
+        }
+      ]
+    }
+  }
+]
