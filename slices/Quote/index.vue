@@ -1,19 +1,25 @@
 <template>
-  <section class="py-5">
-    <blockquote
-      class="relative font-serif text-2xl italic leading-relaxed lg:-mx-20"
+  <Bounded as="section" size="wide">
+    <div
+      v-if="$prismic.asText(slice.primary.quote)"
+      class="font-serif text-3xl italic leading-relaxed"
     >
-      <span class="pointer-events-none absolute top-0 -left-3 select-none">&ldquo;</span><PrismicText :field="slice.primary.quote" wrapper="span" /><span class="pointer-events-none select-none">&rdquo;</span>
-    </blockquote>
-  </section>
+      &ldquo;
+      {{ $prismic.asText(slice.primary.quote) }}
+      &rdquo;
+      <template v-if="slice.primary.source">
+        &mdash; {{ slice.primary.source }}
+      </template>
+    </div>
+  </Bounded>
 </template>
 
 <script>
-import { getSliceComponentProps } from "@prismicio/vue/components";
+import { getSliceComponentProps } from '@prismicio/vue/components'
 
 export default {
-  name: "Quote",
-  // The array passed to `getSliceComponentProps` is purely optional and acts as a visual hint for you
-  props: getSliceComponentProps(["slice", "index", "slices", "context"]),
-};
+  // The array passed to `getSliceComponentProps` is purely optional.
+  // Consider it as a visual hint for you when templating your slice.
+  props: getSliceComponentProps(['slice', 'index', 'slices', 'context'])
+}
 </script>

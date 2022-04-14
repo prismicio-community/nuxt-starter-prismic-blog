@@ -1,17 +1,18 @@
 [
   {
-    "variation": "default-slice",
-    "name": "Default slice",
+    "variation": "default",
+    "name": "Default",
     "slice_type": "quote",
     "items": [],
     "primary": {
       "quote": [
         {
-          "type": "paragraph",
-          "text": "Ad tempor dolore nisi minim laborum laborum. Id tempor Lorem nisi adipisicing commodo nisi nisi. Fugiat non sint do Lorem ullamco consectetur occaecat proident aliquip ullamco et ullamco excepteur.",
+          "type": "heading2",
+          "text": "Harness world-class applications",
           "spans": []
         }
-      ]
+      ],
+      "source": "productize granular blockchains"
     }
   }
 ]
