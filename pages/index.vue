@@ -24,6 +24,9 @@ export default {
       }
     )
     await store.dispatch('prismic/load')
+    store.commit('layout/setWithHeaderProfile', true)
+    store.commit('layout/setWithHeaderDivider', false)
+    store.commit('layout/setWithFooterSignUpForm', true)
     return {
       articles
     }
@@ -32,11 +35,6 @@ export default {
     return {
       title: this.$prismic.asText(this.$store.state.prismic.settings.data.name)
     }
-  },
-  mounted () {
-    this.$store.commit('layout/setWithHeaderProfile', true)
-    this.$store.commit('layout/setWithHeaderDivider', false)
-    this.$store.commit('layout/setWithFooterSignUpForm', true)
   }
 }
 </script>

@@ -66,6 +66,9 @@ export default {
       }
     )
     await store.dispatch('prismic/load')
+    store.commit('layout/setWithHeaderProfile', false)
+    store.commit('layout/setWithHeaderDivider', false)
+    store.commit('layout/setWithFooterSignUpForm', true)
     return {
       article,
       latestArticles
@@ -78,11 +81,6 @@ export default {
     return {
       title: `${this.$prismic.asText(this.article.data.title)} | ${this.$prismic.asText(this.$store.state.prismic.settings.data.name)}`
     }
-  },
-  mounted () {
-    this.$store.commit('layout/setWithHeaderProfile', false)
-    this.$store.commit('layout/setWithHeaderDivider', false)
-    this.$store.commit('layout/setWithFooterSignUpForm', true)
   },
   methods: {
     formatDate (article) {
