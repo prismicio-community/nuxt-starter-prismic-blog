@@ -1,16 +1,41 @@
 <template>
-  <div class="antialiased">
-    <div class="px-6 pt-12 pb-10 text-neutral-700 antialiased md:pt-20">
-      <div class="mx-auto w-full max-w-3xl">
-        <main>
-          <nuxt />
-        </main>
-        <Footer />
-      </div>
-    </div>
+  <div class="text-slate-700">
+    <Header
+      v-if="navigation.data && settings.data"
+      :with-profile="withHeaderProfile"
+      :with-divider="withHeaderDivider"
+      :navigation="navigation"
+      :settings="settings"
+    />
+    <main><nuxt /></main>
+    <Footer v-if="navigation.data && settings.data" :with-sign-up-form="withFooterSignUpForm" :settings="settings" />
   </div>
 </template>
 
 <script>
-export default {};
+export default {
+  computed: {
+    withHeaderProfile () {
+      return this.$store.state.layout.withHeaderProfile
+    },
+    withHeaderDivider () {
+      return this.$store.state.layout.withHeaderDivider
+    },
+    withFooterSignUpForm () {
+      return this.$store.state.layout.withFooterSignUpForm
+    },
+    navigation () {
+      return this.$store.state.prismic.navigation
+    },
+    settings () {
+      return this.$store.state.prismic.settings
+    }
+  }
+}
 </script>
+
+<style>
+body {
+  @apply overflow-x-hidden antialiased;
+}
+</style>

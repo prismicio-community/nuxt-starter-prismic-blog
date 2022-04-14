@@ -1,24 +1,67 @@
 {
-  "slices": {
-    "ImageWithCaption": {
-      "default-slice": {
-        "primary": {}
-      }
-    },
-    "Quote": {
-      "default-slice": {
-        "primary": {
-          "quote": {
-            "config": {
-              "patternType": "PARAGRAPH",
-              "blocks": 1
-            }
+  "_cts": {
+    "navigation": {
+      "links": {
+        "label": {
+          "config": {
+            "patternType": "HEADING",
+            "blocks": 1
           }
+        }
+      },
+      "homepageLabel": {
+        "config": {
+          "patternType": "HEADING",
+          "blocks": 1
         }
       }
     },
+    "page": {
+      "title": {
+        "config": {
+          "patternType": "HEADING",
+          "blocks": 1
+        }
+      }
+    },
+    "article": {
+      "title": {
+        "config": {
+          "patternType": "HEADING",
+          "blocks": 1
+        }
+      }
+    },
+    "settings": {
+      "name": {
+        "config": {
+          "patternType": "HEADING",
+          "blocks": 1
+        }
+      },
+      "description": {
+        "config": {
+          "patternType": "PARAGRAPH",
+          "blocks": 1
+        }
+      },
+      "newsletterDescription": {
+        "config": {
+          "patternType": "PARAGRAPH",
+          "blocks": 1
+        }
+      },
+      "newsletterDisclaimer": {
+        "config": {
+          "patternType": "PARAGRAPH",
+          "blocks": 1
+        }
+      }
+    }
+  },
+  "slices": {
     "Text": {
-      "default-slice": {
+      "default": {
         "primary": {
           "text": {
             "config": {
@@ -28,10 +71,38 @@
           }
         }
       }
+    },
+    "Image": {
+      "default": {
+        "primary": {
+          "caption": {
+            "config": {
+              "patternType": "PARAGRAPH",
+              "blocks": 1
+            }
+          }
+        }
+      },
+      "wide": {
+        "primary": {}
+      }
+    },
+    "Quote": {
+      "default": {
+        "primary": {
+          "quote": {
+            "config": {
+              "patternType": "HEADING",
+              "blocks": 1
+            }
+          }
+        }
+      }
+    },
+    "ContactForm": {
+      "default": {
+        "primary": {}
+      }
     }
-  },
-  "_cts": {
-    "post": {},
-    "blog-home": {}
   }
 }
