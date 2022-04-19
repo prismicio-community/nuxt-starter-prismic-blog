@@ -51,4 +51,4 @@ limitations under the License.
 [prismic-docs]: https://prismic.io/docs/technologies/nuxt
 [prismic-sign-up]: https://prismic.io/dashboard/signup
 [nuxt]: https://nuxtjs.org/
-[live-demo]: https://nuxt-static-blog.netlify.app/
+[live-demo]: https://nuxt-starter-prismic-blog.vercel.app
