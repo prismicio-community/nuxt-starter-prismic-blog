@@ -51,19 +51,17 @@ export default {
       required: true
     }
   },
-  computed: {
-    htmlSerializer () {
-      return (type, element, content, children) => {
-        switch (type) {
-          case 'heading1':
-            return `<h2 class="mb-4 last:mb-0 text-3xl md:text-4xl font-sans font-semibold tracking-tighter text-slate-800">${children.join('')}</h2>`
+  methods: {
+    htmlSerializer (type, element, content, children) {
+      switch (type) {
+        case 'heading1':
+          return /* html */ `<h2 class="mb-4 last:mb-0 text-3xl md:text-4xl font-sans font-semibold tracking-tighter text-slate-800">${children.join('')}</h2>`
 
-          case 'paragraph':
-            return `<p class="mb-4 italic last:mb-0">${children.join('')}</p>`
+        case 'paragraph':
+          return /* html */ `<p class="mb-4 italic last:mb-0">${children.join('')}</p>`
 
-          default:
-            return this.$prismic?.htmlSerializer(type, element, content, children) ?? null
-        }
+        default:
+          return this.$prismic?.htmlSerializer(type, element, content, children) ?? null
       }
     }
   }
