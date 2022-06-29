@@ -57,7 +57,7 @@ To learn more about how to configure previews, read [Preview Drafts in Nuxt](htt
 
 ### Customize this website
 
-This website is preconfigured with Prismic. Functionality is provided by the  `@nuxtjs/prismic` package, which makes Prismic utilities available throughout the app. Take a look at the code to see how it's used.
+This website is preconfigured with Prismic. Functionality is provided by the `@nuxtjs/prismic` package, which makes Prismic utilities available throughout the app. Take a look at the code to see how it's used.
 
 ### Edit the code
 
@@ -71,6 +71,8 @@ Here are some of the files in your project that you can edit:
 - `nuxt.config.js` - The `prismic` property includes configurations for `@nuxtjs/prismic`.
 - `pages/index.vue` - This is the app homepage. It queries and renders a page document with the UID (unique identifier) "home" from the Prismic API.
 - `pages/[uid].vue` - This is the page component, which queries and renders a page document from your Prismic repository based on the UID.
+- `netlify/functions/contact.js` - This is the Netlify function for your contact form. To use the contact form, send a POST request to a back end from this endpoint.
+- `netlify/functions/sign-up.js` - This is the Netlify function for your newsletter form. To allow signups, send a POST request to a newsletter service like Mailchimp.
 - `slices/\*/index.vue` - Each Slice in your project has an index.js file that renders the Slice component. Edit this file to customize your Slices.
 
 These are important files that you should leave as-is:
