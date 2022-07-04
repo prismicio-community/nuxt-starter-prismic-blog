@@ -39,7 +39,7 @@
         },
         "screenshotPaths": {
           "default": {
-            "path": "D:\\Libraries\\Desktop\\prismic\\starter\\nuxt-starter-prismic-blog\\.slicemachine\\assets\\slices\\ContactForm\\default\\preview.png",
+            "path": "D:\\Libraries\\Desktop\\prismic\\starter\\blog-nuxt\\.slicemachine\\assets\\slices\\ContactForm\\default\\preview.png",
             "width": 800,
             "height": 516
           }
@@ -168,7 +168,18 @@
           "fileName": "index",
           "extension": "vue"
         },
-        "screenshotPaths": {}
+        "screenshotPaths": {
+          "default": {
+            "path": "D:\\Libraries\\Desktop\\prismic\\starter\\blog-nuxt\\.slicemachine\\assets\\slices\\Image\\default\\preview.png",
+            "width": 800,
+            "height": 538
+          },
+          "wide": {
+            "path": "D:\\Libraries\\Desktop\\prismic\\starter\\blog-nuxt\\.slicemachine\\assets\\slices\\Image\\wide\\preview.png",
+            "width": 800,
+            "height": 562
+          }
+        }
       },
       "quote": {
         "library": "slices",
@@ -232,7 +243,13 @@
           "fileName": "index",
           "extension": "vue"
         },
-        "screenshotPaths": {}
+        "screenshotPaths": {
+          "default": {
+            "path": "D:\\Libraries\\Desktop\\prismic\\starter\\blog-nuxt\\.slicemachine\\assets\\slices\\Quote\\default\\preview.png",
+            "width": 800,
+            "height": 178
+          }
+        }
       },
       "text": {
         "library": "slices",
@@ -288,7 +305,13 @@
           "fileName": "index",
           "extension": "vue"
         },
-        "screenshotPaths": {}
+        "screenshotPaths": {
+          "default": {
+            "path": "D:\\Libraries\\Desktop\\prismic\\starter\\blog-nuxt\\.slicemachine\\assets\\slices\\Text\\default\\preview.png",
+            "width": 800,
+            "height": 113
+          }
+        }
       }
     }
   }
