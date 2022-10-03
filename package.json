@@ -16,7 +16,7 @@
   },
   "dependencies": {
     "@fontsource/inter": "^4.5.11",
-    "@fontsource/libre-baskerville": "^4.5.8",
+    "@fontsource/libre-baskerville": "^4.5.10",
     "nuxt": "^2.15.8"
   },
   "devDependencies": {
