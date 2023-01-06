@@ -1,24 +1,170 @@
 {
-  "id": "bb44b119-fd37-4b02-822f-dd46c76d10e0",
-  "uid": "animi-quidem-aspernatur",
-  "type": "article",
-  "data": {
-    "title": [
+  "uid": {
+    "__TYPE__": "UIDContent",
+    "value": "sweet"
+  },
+  "title": {
+    "__TYPE__": "StructuredTextContent",
+    "value": [
       {
         "type": "heading1",
-        "text": "Target integrated bandwidth",
-        "spans": []
+        "content": {
+          "text": "Tears"
+        }
       }
-    ],
-    "publishDate": "2014-08-18",
-    "featuredImage": {
-      "dimensions": {
-        "width": 2000,
-        "height": 1500
+    ]
+  },
+  "publishDate": {
+    "__TYPE__": "FieldContent",
+    "type": "Date",
+    "value": "2022-06-12"
+  },
+  "featuredImage": {
+    "__TYPE__": "ImageContent",
+    "origin": {
+      "id": "main",
+      "url": "https://images.unsplash.com/photo-1491975474562-1f4e30bc9468",
+      "width": 4000,
+      "height": 6000
+    },
+    "url": "https://images.unsplash.com/photo-1491975474562-1f4e30bc9468?rect=0%2C1500%2C4000%2C3000&w=2000&h=1500",
+    "width": 2000,
+    "height": 1500,
+    "edit": {
+      "zoom": 1,
+      "crop": {
+        "x": 0,
+        "y": 1500
       },
-      "alt": "Placeholder image",
-      "copyright": null,
-      "url": "https://images.unsplash.com/photo-1591012911207-0dbac31f37da?w=2000&h=1500&fit=crop"
-    }
+      "background": "transparent"
+    },
+    "thumbnails": {}
+  },
+  "slices": {
+    "__TYPE__": "SliceContentType",
+    "value": [
+      {
+        "key": "image$54ed36ba-a1d9-4f5c-bf0f-0d6a8282f573",
+        "name": "image",
+        "widget": {
+          "__TYPE__": "SharedSliceContent",
+          "variation": "default",
+          "primary": {
+            "image": {
+              "__TYPE__": "ImageContent",
+              "origin": {
+                "id": "main",
+                "url": "https://images.unsplash.com/photo-1531771686035-25f47595c87a",
+                "width": 3024,
+                "height": 3778
+              },
+              "url": "https://images.unsplash.com/photo-1531771686035-25f47595c87a",
+              "width": 3024,
+              "height": 3778,
+              "edit": {
+                "zoom": 1,
+                "crop": {
+                  "x": 0,
+                  "y": 0
+                },
+                "background": "transparent"
+              },
+              "thumbnails": {}
+            },
+            "caption": {
+              "__TYPE__": "StructuredTextContent",
+              "value": [
+                {
+                  "type": "paragraph",
+                  "content": {
+                    "text": "Cupidatat aliqua irure occaecat ullamco amet consectetur aliquip aliqua sunt occaecat nulla velit. Duis fugiat quis ad commodo."
+                  }
+                }
+              ]
+            }
+          },
+          "items": [
+            {
+              "__TYPE__": "GroupItemContent",
+              "value": []
+            }
+          ]
+        }
+      },
+      {
+        "key": "quote$7f263832-18c4-4996-a1d0-bcdb264cd1b2",
+        "name": "quote",
+        "widget": {
+          "__TYPE__": "SharedSliceContent",
+          "variation": "default",
+          "primary": {
+            "quote": {
+              "__TYPE__": "StructuredTextContent",
+              "value": [
+                {
+                  "type": "heading2",
+                  "content": {
+                    "text": "Children"
+                  }
+                }
+              ]
+            },
+            "source": {
+              "__TYPE__": "FieldContent",
+              "value": "chance",
+              "type": "Text"
+            }
+          },
+          "items": [
+            {
+              "__TYPE__": "GroupItemContent",
+              "value": []
+            }
+          ]
+        }
+      },
+      {
+        "key": "text$dcfce444-474c-499d-a310-cffeb75ed33d",
+        "name": "text",
+        "widget": {
+          "__TYPE__": "SharedSliceContent",
+          "variation": "default",
+          "primary": {
+            "text": {
+              "__TYPE__": "StructuredTextContent",
+              "value": [
+                {
+                  "type": "paragraph",
+                  "content": {
+                    "text": "Aliqua eiusmod incididunt consectetur ipsum do minim adipisicing in id irure est commodo veniam aliquip."
+                  }
+                }
+              ]
+            }
+          },
+          "items": [
+            {
+              "__TYPE__": "GroupItemContent",
+              "value": []
+            }
+          ]
+        }
+      },
+      {
+        "key": "contact_form$2aabb971-9b0a-45c7-9b24-137a41284f1e",
+        "name": "contact_form",
+        "widget": {
+          "__TYPE__": "SharedSliceContent",
+          "variation": "default",
+          "primary": {},
+          "items": [
+            {
+              "__TYPE__": "GroupItemContent",
+              "value": []
+            }
+          ]
+        }
+      }
+    ]
   }
 }

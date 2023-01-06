@@ -1,0 +1,32 @@
+[
+  {
+    "__TYPE__": "SharedSliceContent",
+    "variation": "default",
+    "primary": {
+      "quote": {
+        "__TYPE__": "StructuredTextContent",
+        "value": [
+          {
+            "type": "heading2",
+            "content": {
+              "text": "A ship in port is safe; but that is not what ships are built for. Sail out to sea and do new things.",
+              "spans": []
+            },
+            "direction": "ltr"
+          }
+        ]
+      },
+      "source": {
+        "__TYPE__": "FieldContent",
+        "type": "Text",
+        "value": "Grace Hopper"
+      }
+    },
+    "items": [
+      {
+        "__TYPE__": "GroupItemContent",
+        "value": []
+      }
+    ]
+  }
+]
