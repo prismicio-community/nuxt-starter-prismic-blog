@@ -1,5 +1,5 @@
 <template>
-  <SliceSimulator v-slot="{ slices }" :state="state">
+  <SliceSimulator v-slot="{ slices }">
     <SliceZone :slices="slices" :components="components" />
   </SliceSimulator>
 </template>
@@ -15,7 +15,7 @@ export default {
     SliceSimulator
   },
   data () {
-    return { state, components }
+    return { components }
   }
 }
 </script>
