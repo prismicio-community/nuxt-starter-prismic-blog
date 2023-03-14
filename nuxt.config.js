@@ -8,7 +8,7 @@ export default {
   head: {
     title: 'Prismic + Nuxt blog example',
     htmlAttrs: {
-      lang: 'en',
+      lang: 'en'
     },
     meta: [
       { charset: 'utf-8' },
@@ -16,34 +16,34 @@ export default {
       {
         hid: 'description',
         name: 'description',
-        content: 'Prismic + Nuxt blog example',
+        content: 'Prismic + Nuxt blog example'
       },
-      { name: 'format-detection', content: 'telephone=no' },
+      { name: 'format-detection', content: 'telephone=no' }
     ],
-    link: [{ rel: 'icon', type: 'image/png', href: '/favicon.png' }],
+    link: [{ rel: 'icon', type: 'image/png', href: '/favicon.png' }]
   },
 
   // Modules for dev and build (recommended): https://go.nuxtjs.dev/config-modules
   buildModules: ['@nuxt/postcss8', '@nuxtjs/prismic'],
 
   generate: {
-    exclude: ['/slice-simulator'],
+    exclude: ['/slice-simulator']
   },
 
   build: {
     // See: https://github.com/nuxt/postcss8/issues/24
     loaders: {
       css: {
-        modules: false,
-      },
+        modules: false
+      }
     },
     postcss: {
       plugins: {
         tailwindcss: {},
-        autoprefixer: {},
-      },
+        autoprefixer: {}
+      }
     },
-    transpile: ['@prismicio/vue'],
+    transpile: ['@prismicio/vue']
   },
 
   // Global CSS: https://go.nuxtjs.dev/config-css
@@ -53,14 +53,14 @@ export default {
     '@fontsource/inter/600.css',
     '@fontsource/libre-baskerville/400.css',
     '@fontsource/libre-baskerville/400-italic.css',
-    '@fontsource/libre-baskerville/700.css',
+    '@fontsource/libre-baskerville/700.css'
   ],
 
   // Auto import components: https://go.nuxtjs.dev/config-components
   components: true,
 
   publicRuntimeConfig: {
-    development: process.env.NODE_ENV === 'development',
+    development: process.env.NODE_ENV === 'development'
   },
 
   prismic: {
@@ -71,29 +71,29 @@ export default {
       routes: [
         {
           type: 'page',
-          path: '/:uid',
+          path: '/:uid'
         },
         {
           type: 'article',
-          path: '/articles/:uid',
-        },
-      ],
+          path: '/articles/:uid'
+        }
+      ]
     },
     htmlSerializer(type, element, content, children) {
       switch (type) {
         case 'heading1':
           return /* html */ `<h2 class="font-sans font-semibold tracking-tighter text-slate-800 text-3xl mb-7 mt-12 first:mt-0 last:mb-0">${children.join(
-            '',
+            ''
           )}</h2>`
 
         case 'heading2':
           return /* html */ `<h3 class="font-sans font-semibold tracking-tighter text-slate-800 text-2xl mb-7 last:mb-0">${children.join(
-            '',
+            ''
           )}</h3>`
 
         case 'heading3':
           return /* html */ `<h4 class="font-sans font-semibold tracking-tighter text-slate-800 text-xl mb-7 last:mb-0">${children.join(
-            '',
+            ''
           )}</h4>`
 
         case 'paragraph':
@@ -101,22 +101,22 @@ export default {
 
         case 'group-o-list-item':
           return /* html */ `<ol class="mb-7 pl-4 last:mb-0 md:pl-6">${children.join(
-            '',
+            ''
           )}</ol>`
 
         case 'o-list-item':
           return /* html */ `<li class="mb-1 list-decimal pl-1 last:mb-0 md:pl-2">${children.join(
-            '',
+            ''
           )}</li>`
 
         case 'group-list-item':
           return /* html */ `<ul class="mb-7 pl-4 last:mb-0 md:pl-6">${children.join(
-            '',
+            ''
           )}</ul>`
 
         case 'list-item':
           return /* html */ `<li class="mb-1 list-disc pl-1 last:mb-0 md:pl-2">${children.join(
-            '',
+            ''
           )}</li>`
 
         case 'preformatted':
@@ -126,19 +126,19 @@ export default {
 
         case 'strong':
           return /* html */ `<strong class="font-semibold">${children.join(
-            '',
+            ''
           )}</strong>`
 
         case 'hyperlink':
           return /* html */ `<a href="${
             element.data.url
           }" class="underline decoration-1 underline-offset-2">${children.join(
-            '',
+            ''
           )}</a>`
 
         default:
           return null
       }
-    },
-  },
+    }
+  }
 }
