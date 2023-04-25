@@ -1,4 +1,4 @@
-import sm from './sm.json'
+import { repositoryName } from './slicemachine.config.json'
 
 export default {
   // Target: https://go.nuxtjs.dev/config-target
@@ -66,7 +66,7 @@ export default {
   },
 
   prismic: {
-    endpoint: sm.apiEndpoint,
+    endpoint: `https://${repositoryName}.cdn.prismic.io/api/v2`,
     preview: '/api/preview',
     modern: true,
     apiOptions: {
@@ -81,7 +81,7 @@ export default {
         }
       ]
     },
-    htmlSerializer(type, element, content, children) {
+    htmlSerializer (type, element, content, children) {
       switch (type) {
         case 'heading1':
           return /* html */ `<h2 class="font-sans font-semibold tracking-tighter text-slate-800 text-3xl mb-7 mt-12 first:mt-0 last:mb-0">${children.join(

@@ -1,0 +1,69 @@
+[
+  {
+    "name": {
+      "__TYPE__": "StructuredTextContent",
+      "value": [
+        {
+          "type": "heading1",
+          "content": {
+            "text": "Population"
+          }
+        }
+      ]
+    },
+    "description": {
+      "__TYPE__": "StructuredTextContent",
+      "value": [
+        {
+          "type": "paragraph",
+          "content": {
+            "text": "Culpa eiusmod occaecat cupidatat Lorem aute sint eiusmod tempor voluptate. Officia et nisi qui adipisicing voluptate. Anim aliquip deserunt dolore reprehenderit aute mollit quis."
+          }
+        }
+      ]
+    },
+    "profilePicture": {
+      "__TYPE__": "ImageContent",
+      "origin": {
+        "id": "main",
+        "url": "https://images.unsplash.com/photo-1515378791036-0648a3ef77b2",
+        "width": 5616,
+        "height": 3744
+      },
+      "url": "https://images.unsplash.com/photo-1515378791036-0648a3ef77b2?rect=936%2C0%2C3744%2C3744&w=2000&h=2000",
+      "width": 2000,
+      "height": 2000,
+      "edit": {
+        "zoom": 1,
+        "crop": {
+          "x": 936,
+          "y": 0
+        },
+        "background": "transparent"
+      },
+      "thumbnails": {}
+    },
+    "newsletterDescription": {
+      "__TYPE__": "StructuredTextContent",
+      "value": [
+        {
+          "type": "paragraph",
+          "content": {
+            "text": "Consectetur occaecat voluptate amet. Anim nisi officia eiusmod ullamco ad amet labore eiusmod veniam et."
+          }
+        }
+      ]
+    },
+    "newsletterDisclaimer": {
+      "__TYPE__": "StructuredTextContent",
+      "value": [
+        {
+          "type": "paragraph",
+          "content": {
+            "text": "Dolore cupidatat sint tempor laborum est."
+          }
+        }
+      ]
+    }
+  }
+]
