@@ -1,0 +1,172 @@
+[
+  {
+    "uid": {
+      "__TYPE__": "UIDContent",
+      "value": "straw"
+    },
+    "title": {
+      "__TYPE__": "StructuredTextContent",
+      "value": [
+        {
+          "type": "heading1",
+          "content": {
+            "text": "Highway"
+          }
+        }
+      ]
+    },
+    "publishDate": {
+      "__TYPE__": "FieldContent",
+      "type": "Date",
+      "value": "2013-07-15"
+    },
+    "featuredImage": {
+      "__TYPE__": "ImageContent",
+      "origin": {
+        "id": "main",
+        "url": "https://images.unsplash.com/photo-1587653915936-5623ea0b949a",
+        "width": 4000,
+        "height": 4000
+      },
+      "url": "https://images.unsplash.com/photo-1587653915936-5623ea0b949a?rect=0%2C500%2C4000%2C3000&w=2000&h=1500",
+      "width": 2000,
+      "height": 1500,
+      "edit": {
+        "zoom": 1,
+        "crop": {
+          "x": 0,
+          "y": 500
+        },
+        "background": "transparent"
+      },
+      "thumbnails": {}
+    },
+    "slices": {
+      "__TYPE__": "SliceContentType",
+      "value": [
+        {
+          "key": "image$f9f56b27-daf4-4dd5-9218-c49c18fb0808",
+          "name": "image",
+          "widget": {
+            "__TYPE__": "SharedSliceContent",
+            "variation": "default",
+            "primary": {
+              "image": {
+                "__TYPE__": "ImageContent",
+                "origin": {
+                  "id": "main",
+                  "url": "https://images.unsplash.com/photo-1579931794097-0ad001e51edb",
+                  "width": 3958,
+                  "height": 3958
+                },
+                "url": "https://images.unsplash.com/photo-1579931794097-0ad001e51edb",
+                "width": 3958,
+                "height": 3958,
+                "edit": {
+                  "zoom": 1,
+                  "crop": {
+                    "x": 0,
+                    "y": 0
+                  },
+                  "background": "transparent"
+                },
+                "thumbnails": {}
+              },
+              "caption": {
+                "__TYPE__": "StructuredTextContent",
+                "value": [
+                  {
+                    "type": "paragraph",
+                    "content": {
+                      "text": "Ut nostrud ipsum proident id."
+                    }
+                  }
+                ]
+              }
+            },
+            "items": [
+              {
+                "__TYPE__": "GroupItemContent",
+                "value": []
+              }
+            ]
+          }
+        },
+        {
+          "key": "quote$a6e62af0-7657-42fd-89cd-3764b1979f19",
+          "name": "quote",
+          "widget": {
+            "__TYPE__": "SharedSliceContent",
+            "variation": "default",
+            "primary": {
+              "quote": {
+                "__TYPE__": "StructuredTextContent",
+                "value": [
+                  {
+                    "type": "heading2",
+                    "content": {
+                      "text": "Selection"
+                    }
+                  }
+                ]
+              },
+              "source": {
+                "__TYPE__": "FieldContent",
+                "value": "friend",
+                "type": "Text"
+              }
+            },
+            "items": [
+              {
+                "__TYPE__": "GroupItemContent",
+                "value": []
+              }
+            ]
+          }
+        },
+        {
+          "key": "text$8387b5e6-4e3d-4dd0-9928-e6f6de12cb50",
+          "name": "text",
+          "widget": {
+            "__TYPE__": "SharedSliceContent",
+            "variation": "default",
+            "primary": {
+              "text": {
+                "__TYPE__": "StructuredTextContent",
+                "value": [
+                  {
+                    "type": "paragraph",
+                    "content": {
+                      "text": "Enim minim eu proident ullamco cillum magna sunt sunt id nisi incididunt magna mollit minim."
+                    }
+                  }
+                ]
+              }
+            },
+            "items": [
+              {
+                "__TYPE__": "GroupItemContent",
+                "value": []
+              }
+            ]
+          }
+        },
+        {
+          "key": "contact_form$5272973c-2afe-4389-9de1-9113cb07ddbe",
+          "name": "contact_form",
+          "widget": {
+            "__TYPE__": "SharedSliceContent",
+            "variation": "default",
+            "primary": {},
+            "items": [
+              {
+                "__TYPE__": "GroupItemContent",
+                "value": []
+              }
+            ]
+          }
+        }
+      ]
+    }
+  }
+]

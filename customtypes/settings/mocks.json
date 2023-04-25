@@ -1,0 +1,69 @@
+[
+  {
+    "name": {
+      "__TYPE__": "StructuredTextContent",
+      "value": [
+        {
+          "type": "heading1",
+          "content": {
+            "text": "Climb"
+          }
+        }
+      ]
+    },
+    "description": {
+      "__TYPE__": "StructuredTextContent",
+      "value": [
+        {
+          "type": "paragraph",
+          "content": {
+            "text": "Cillum et excepteur Lorem elit excepteur sint Lorem reprehenderit ut ea occaecat incididunt aliquip."
+          }
+        }
+      ]
+    },
+    "profilePicture": {
+      "__TYPE__": "ImageContent",
+      "origin": {
+        "id": "main",
+        "url": "https://images.unsplash.com/photo-1560457079-9a6532ccb118",
+        "width": 4160,
+        "height": 3120
+      },
+      "url": "https://images.unsplash.com/photo-1560457079-9a6532ccb118?rect=520%2C0%2C3120%2C3120&w=2000&h=2000",
+      "width": 2000,
+      "height": 2000,
+      "edit": {
+        "zoom": 1,
+        "crop": {
+          "x": 520,
+          "y": 0
+        },
+        "background": "transparent"
+      },
+      "thumbnails": {}
+    },
+    "newsletterDescription": {
+      "__TYPE__": "StructuredTextContent",
+      "value": [
+        {
+          "type": "paragraph",
+          "content": {
+            "text": "Voluptate est labore mollit eiusmod excepteur. Deserunt incididunt ex voluptate."
+          }
+        }
+      ]
+    },
+    "newsletterDisclaimer": {
+      "__TYPE__": "StructuredTextContent",
+      "value": [
+        {
+          "type": "paragraph",
+          "content": {
+            "text": "Ut voluptate cupidatat id id est veniam ipsum nulla proident fugiat esse fugiat irure. Commodo ad sint aute."
+          }
+        }
+      ]
+    }
+  }
+]
