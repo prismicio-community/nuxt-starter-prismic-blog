@@ -18,7 +18,7 @@ To start a new project using this starter, run the following commands in your te
 ```sh
 npx degit prismicio-community/nuxt-starter-prismic-blog your-project-name
 cd your-project-name
-npx @slicemachine/init
+npx @slicemachine/init@latest
 ```
 
 The commands will do the following:
