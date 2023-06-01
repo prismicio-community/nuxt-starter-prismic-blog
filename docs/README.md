@@ -1,6 +1,6 @@
 # Prismic + Nuxt Blog Starter
 
-This sample blog is an excellent starting point to explore [Nuxt][nuxt] and [Prismic][prismic]. Get it up and running in minutes. Modify and adapt it to your liking; it's all yours!
+This page covers how to use **Prismic + Nuxt Blog Starter** with Prismic.
 
 - **Demo**: [Open live demo][live-demo]
 - **Learn more about Prismic and Nuxt**: [Prismic Nuxt Documentation][prismic-docs]
@@ -18,7 +18,7 @@ To start a new project using this starter, run the following commands in your te
 ```sh
 npx degit prismicio-community/nuxt-starter-prismic-blog your-project-name
 cd your-project-name
-npx @slicemachine/init@latest
+npx @slicemachine/init
 ```
 
 The commands will do the following:
@@ -33,33 +33,79 @@ When you're ready to start your project, run the following command:
 npm run dev
 ```
 
-## Documentation
+To learn more about working with Prismic, [**see the Prismic docs**](https://prismic.io/docs/nuxt-3-setup).
 
-To learn how to work with your new project, [**see this starter's docs**][starter-docs].
+## Using and customizing your project
 
-To learn more about working with Prismic, [**see the Prismic docs**][prismic-docs].
+To get started after creating your new project, go to [prismic.io/dashboard](https://prismic.io/dashboard), click on the repository for this website, and start editing.
 
-## License
+### Create a page
 
-```
-Copyright 2013-2023 Prismic <contact@prismic.io> (https://prismic.io)
+To create a page, click on the green pencil icon, then select **Page**.
 
-Licensed under the Apache License, Version 2.0 (the "License");
-you may not use this file except in compliance with the License.
-You may obtain a copy of the License at
+Your new page will be accessible by its URL, but it won't appear on the website automatically. To let users discover it, add it to the navigation.
 
-    http://www.apache.org/licenses/LICENSE-2.0
+### Update the navigation
 
-Unless required by applicable law or agreed to in writing, software
-distributed under the License is distributed on an "AS IS" BASIS,
-WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
-See the License for the specific language governing permissions and
-limitations under the License.
-```
+To add a page to your navigation menu, go to the document list and open the **Navigation** document. In the **Links** group, click **Add a new element in Links**. Select the page to add and fill in a label.
+
+### Preview documents
+
+In your repository, go to _Settings > Previews_. Under _Create a New Preview_, fill in the three fields:
+
+- a name (like **Development** or **Production**)
+- the domain where your app is running (like <http://localhost:3000> or <https://www.yoursite.com>)
+- `/api/preview` for the Link Resolver
+
+Now, go to a draft document and click the eye icon in the top-right corner.
+
+To learn more about how to configure previews, read [Preview Drafts in Nuxt](https://prismic.io/docs/technologies/nuxt-preview-drafts) in the Prismic documentation.
+
+### Customize this website
+
+This website is preconfigured with Prismic. Functionality is provided by the `@nuxtjs/prismic` package, which makes Prismic utilities available throughout the app. Take a look at the code to see how it's used.
+
+### Edit the code
+
+There are two steps to rendering content from Prismic in your Nuxt project:
+
+1. Fetch content from the Prismic API
+2. Template the content
+
+Here are some of the files in your project that you can edit:
+
+- `nuxt.config.ts` - The `prismic` property includes configurations for `@nuxtjs/prismic`.
+- `pages/index.vue` - This is the app homepage. It queries and renders a page document with the UID (unique identifier) "home" from the Prismic API.
+- `pages/[uid].vue` - This is the page component, which queries and renders a page document from your Prismic repository based on the UID.
+- `server/api/contact.post.ts` - This is the server function for your contact form. To use the contact form, send a POST request to a back end from this endpoint.
+- `server/api/sign-up.post.ts` - This is the server function for your newsletter form. To allow signups, send a POST request to a newsletter service like Mailchimp.
+- `slices/\*/index.vue` - Each Slice in your project has an index.js file that renders the Slice component. Edit this file to customize your Slices.
+
+These are important files that you should leave as-is:
+
+- `pages/slice-simulator.vue` - Do not edit or delete this file. This file simulates your Slice components in development.
+- `slices/` - This directory contains Slice components, which are generated programmatically by Slice Machine. To customize a Slice template, you can edit the Slice's `index.ts` file. To add Slices, delete Slices, or edit Slice models, use Slice Machine (more info below).
+
+Learn more about how to edit your components with [Fetch Data in Nuxt](https://prismic.io/docs/nuxt-3-fetch-data) and [Template Content in Nuxt](https://prismic.io/docs/nuxt-3-template-content).
+
+Styling in this project is implemented with Tailwind CSS. See the [Tailwind docs](https://tailwindcss.com/docs) for more info.
+
+### Deploy to the web
+
+To put your project online, see [Deploy your Nuxt App](https://prismic.io/docs/technologies/nuxt-deploy).
+
+### Edit content models with Slice Machine
+
+This project includes an application called Slice Machine, which generates models for your Custom Types and Slices. Slice Machine stores the models locally in your codebase, so you can save and version them. It also syncs your models to Prismic. To learn how to use Slice Machine, read [Model Content in Nuxt](https://prismic.io/docs/content-modeling).
+
+If you change or add to your Custom Types, you'll need to update your route handling to match. To learn how to do that, read [Define Paths in Nuxt](https://prismic.io/docs/nuxt-3-define-routes).
+
+## Learn more
+
+For the official Prismic documentation, see [Prismic's guide for Nuxt][prismic-docs] or the [technical references for the installed Prismic packages](https://prismic.io/docs/technologies/technical-references).
 
 [prismic]: https://prismic.io
 [prismic-docs]: https://prismic.io/docs/nuxt-3-setup
 [prismic-sign-up]: https://prismic.io/dashboard/signup
-[starter-docs]: ./docs/README.md
 [nuxt]: https://nuxt.com
 [live-demo]: https://nuxt-starter-prismic-blog.vercel.app
