@@ -23,11 +23,11 @@
     "@nuxtjs/prismic": "rc",
     "@nuxtjs/tailwindcss": "^6.7.0",
     "@types/node": "^18",
-    "@slicemachine/adapter-nuxt": "^0.2.0",
+    "@slicemachine/adapter-nuxt": "^0.2.1",
     "@tailwindcss/aspect-ratio": "^0.4.2",
     "concurrently": "^8.1.0",
-    "eslint": "^8.41.0",
+    "eslint": "^8.42.0",
     "nuxt": "^3.5.2",
-    "slice-machine-ui": "^1.1.0"
+    "slice-machine-ui": "^1.1.1"
   }
 }

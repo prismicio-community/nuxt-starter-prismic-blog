@@ -1,6 +1,5 @@
 <script setup lang="ts">
-// TODO: Migrate
-import { RichTextField } from '@prismicio/types'
+import { RichTextField } from '@prismicio/client'
 
 defineProps({
   name: {
