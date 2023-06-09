@@ -1,5 +1,21 @@
+<script setup lang="ts">
+defineProps({
+  as: {
+    type: [String, Object, Function],
+    default: 'div'
+  },
+  size: {
+    type: String,
+    default: 'base'
+  }
+})
+</script>
+
 <template>
-  <Component :is="as" class="px-4 py-8 md:py-10 md:px-6 lg:py-12">
+  <Component
+    :is="as"
+    class="px-4 py-8 md:py-10 md:px-6 lg:py-12"
+  >
     <div
       class="mx-auto w-full"
       :class="{
@@ -14,17 +30,3 @@
   </Component>
 </template>
 
-<script>
-export default {
-  props: {
-    as: {
-      type: [String, Object, Function],
-      default: 'div'
-    },
-    size: {
-      type: String,
-      default: 'base'
-    }
-  }
-}
-</script>

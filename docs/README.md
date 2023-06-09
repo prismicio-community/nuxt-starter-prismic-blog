@@ -33,7 +33,7 @@ When you're ready to start your project, run the following command:
 npm run dev
 ```
 
-To learn more about working with Prismic, [**see the Prismic docs**](https://prismic.io/docs/technologies/nextjs).
+To learn more about working with Prismic, [**see the Prismic docs**](https://prismic.io/docs/nuxt-3-setup).
 
 ## Using and customizing your project
 
@@ -74,19 +74,19 @@ There are two steps to rendering content from Prismic in your Nuxt project:
 
 Here are some of the files in your project that you can edit:
 
-- `nuxt.config.js` - The `prismic` property includes configurations for `@nuxtjs/prismic`.
+- `nuxt.config.ts` - The `prismic` property includes configurations for `@nuxtjs/prismic`.
 - `pages/index.vue` - This is the app homepage. It queries and renders a page document with the UID (unique identifier) "home" from the Prismic API.
 - `pages/[uid].vue` - This is the page component, which queries and renders a page document from your Prismic repository based on the UID.
-- `netlify/functions/contact.js` - This is the Netlify function for your contact form. To use the contact form, send a POST request to a back end from this endpoint.
-- `netlify/functions/sign-up.js` - This is the Netlify function for your newsletter form. To allow signups, send a POST request to a newsletter service like Mailchimp.
+- `server/api/contact.post.ts` - This is the server function for your contact form. To use the contact form, send a POST request to a back end from this endpoint.
+- `server/api/sign-up.post.ts` - This is the server function for your newsletter form. To allow signups, send a POST request to a newsletter service like Mailchimp.
 - `slices/\*/index.vue` - Each Slice in your project has an index.js file that renders the Slice component. Edit this file to customize your Slices.
 
 These are important files that you should leave as-is:
 
 - `pages/slice-simulator.vue` - Do not edit or delete this file. This file simulates your Slice components in development.
-- `slices/` - This directory contains Slice components, which are generated programmatically by Slice Machine. To customize a Slice template, you can edit the Slice's `index.js` file. To add Slices, delete Slices, or edit Slice models, use Slice Machine (more info below).
+- `slices/` - This directory contains Slice components, which are generated programmatically by Slice Machine. To customize a Slice template, you can edit the Slice's `index.ts` file. To add Slices, delete Slices, or edit Slice models, use Slice Machine (more info below).
 
-Learn more about how to edit your components with [Fetch Data in Nuxt](https://prismic.io/docs/technologies/nuxt-fetch-data) and [Template Content in Nuxt](https://prismic.io/docs/technologies/nuxt-template-content).
+Learn more about how to edit your components with [Fetch Data in Nuxt](https://prismic.io/docs/nuxt-3-fetch-data) and [Template Content in Nuxt](https://prismic.io/docs/nuxt-3-template-content).
 
 Styling in this project is implemented with Tailwind CSS. See the [Tailwind docs](https://tailwindcss.com/docs) for more info.
 
@@ -96,16 +96,16 @@ To put your project online, see [Deploy your Nuxt App](https://prismic.io/docs/t
 
 ### Edit content models with Slice Machine
 
-This project includes an application called Slice Machine, which generates models for your Custom Types and Slices. Slice Machine stores the models locally in your codebase, so you can save and version them. It also syncs your models to Prismic. To learn how to use Slice Machine, read [Model Content in Nuxt](https://prismic.io/docs/technologies/nuxt-model-content).
+This project includes an application called Slice Machine, which generates models for your Custom Types and Slices. Slice Machine stores the models locally in your codebase, so you can save and version them. It also syncs your models to Prismic. To learn how to use Slice Machine, read [Model Content in Nuxt](https://prismic.io/docs/content-modeling).
 
-If you change or add to your Custom Types, you'll need to update your route handling to match. To learn how to do that, read [Define Paths in Nuxt](https://prismic.io/docs/technologies/nuxt-define-routes).
+If you change or add to your Custom Types, you'll need to update your route handling to match. To learn how to do that, read [Define Paths in Nuxt](https://prismic.io/docs/nuxt-3-define-routes).
 
 ## Learn more
 
 For the official Prismic documentation, see [Prismic's guide for Nuxt][prismic-docs] or the [technical references for the installed Prismic packages](https://prismic.io/docs/technologies/technical-references).
 
-[prismic]: https://prismic.io/
-[prismic-docs]: https://prismic.io/docs/technologies/nuxt
+[prismic]: https://prismic.io
+[prismic-docs]: https://prismic.io/docs/nuxt-3-setup
 [prismic-sign-up]: https://prismic.io/dashboard/signup
-[nextjs]: https://nextjs.org/
-[live-demo]: https://nuxt-starter-prismic-blog.vercel.app/
+[nuxt]: https://nuxt.com
+[live-demo]: https://nuxt-starter-prismic-blog.vercel.app

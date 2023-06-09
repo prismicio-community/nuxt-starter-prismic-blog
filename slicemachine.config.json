@@ -1,6 +1,8 @@
 {
-  "libraries": ["./slices"],
-  "adapter": "@slicemachine/adapter-nuxt2",
+  "libraries": [
+    "./slices"
+  ],
+  "adapter": "@slicemachine/adapter-nuxt",
   "repositoryName": "nextjs-starter-prismic-blog",
   "localSliceSimulatorURL": "http://localhost:3000/slice-simulator"
 }

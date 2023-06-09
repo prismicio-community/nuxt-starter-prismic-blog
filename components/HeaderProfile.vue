@@ -1,7 +1,29 @@
+<script setup lang="ts">
+import { RichTextField } from '@prismicio/client'
+
+defineProps({
+  name: {
+    type: Object as PropType<RichTextField>,
+    required: true
+  },
+  description: {
+    type: Object as PropType<RichTextField>,
+    required: true
+  },
+  profilePicture: {
+    type: Object,
+    required: true
+  }
+})
+</script>
+
 <template>
   <div class="px-4">
     <div class="grid max-w-lg grid-cols-1 justify-items-center gap-8">
-      <NuxtLink to="/" tab-index="-1">
+      <NuxtLink
+        to="/"
+        tab-index="-1"
+      >
         <div class="relative h-40 w-40 overflow-hidden rounded-full bg-slate-300">
           <PrismicImage
             v-if="profilePicture.url"
@@ -29,22 +51,3 @@
     </div>
   </div>
 </template>
-
-<script>
-export default {
-  props: {
-    name: {
-      type: Array,
-      required: true
-    },
-    description: {
-      type: Array,
-      required: true
-    },
-    profilePicture: {
-      type: Object,
-      required: true
-    }
-  }
-}
-</script>
