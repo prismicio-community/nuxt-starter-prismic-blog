@@ -41,6 +41,12 @@ useHead({
   title: computed(() => `${prismic.asText(article.value?.data.title)} | ${prismic.asText(settings.value?.data.name)}`)
 })
 
+useSeoMeta({
+  ogTitle: article.value?.data.meta_title,
+  description: article.value?.data.meta_description,
+  ogImage: prismic.asLink(article.value?.data.meta_image),
+})
+
 const formatDate = (article: Content.ArticleDocument | null) => {
   // TODO: Remove when fixed
   // @ts-expect-error Fixed in upcoming version

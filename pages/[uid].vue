@@ -22,6 +22,12 @@ onMounted(() => {
 useHead({
   title: computed(() => `${prismic.asText(page.value?.data.title)} | ${prismic.asText(settings.value?.data.name)}`)
 })
+
+useSeoMeta({
+  ogTitle: page.value?.data.meta_title,
+  description: page.value?.data.meta_description,
+  ogImage: prismic.asLink(page.value?.data.meta_image),
+})
 </script>
 
 <template>
