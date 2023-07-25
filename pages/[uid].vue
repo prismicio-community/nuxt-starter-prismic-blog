@@ -26,7 +26,7 @@ useHead({
 useSeoMeta({
   ogTitle: page.value?.data.meta_title,
   description: page.value?.data.meta_description,
-  ogImage: prismic.asLink(page.value?.data.meta_image),
+  ogImage: page.value?.data.meta_image.url,
 })
 </script>
 

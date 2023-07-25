@@ -44,7 +44,7 @@ useHead({
 useSeoMeta({
   ogTitle: article.value?.data.meta_title,
   description: article.value?.data.meta_description,
-  ogImage: prismic.asLink(article.value?.data.meta_image),
+  ogImage: article.value?.data.meta_image.url,
 })
 
 const formatDate = (article: Content.ArticleDocument | null) => {
