@@ -20,8 +20,7 @@
           :style="{
             textDecoration: 'underline'
           }"
-          >see the documentation</a
-        >. Remove this bar in <code>layouts/default.vue</code>.
+        >see the documentation</a>. Remove this bar in <code>layouts/default.vue</code>.
       </p>
     </div>
     <Header

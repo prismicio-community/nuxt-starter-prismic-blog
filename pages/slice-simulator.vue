@@ -5,7 +5,7 @@
 </template>
 
 <script>
-import { SliceSimulator } from '@prismicio/slice-simulator-vue'
+import { SliceSimulator } from '@slicemachine/adapter-nuxt2/dist/simulator.cjs'
 import { components } from '~/slices'
 
 export default {
