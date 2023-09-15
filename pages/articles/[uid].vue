@@ -11,7 +11,8 @@ const dateFormatter = new Intl.DateTimeFormat('en-US', {
 
 const prismic = usePrismic()
 const route = useRoute()
-const { data: article } = useAsyncData('articles/[uid]', () =>
+
+const { data: article } = useAsyncData(`articles/${route.params.uid}`, () =>
   prismic.client.getByUID('article', route.params.uid as string)
 )
 const { data: latestArticles } = useAsyncData('$latestArticles', () =>
