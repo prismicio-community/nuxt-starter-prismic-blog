@@ -2,7 +2,7 @@
 defineProps({
   withDivider: {
     type: Boolean,
-    default: true
+    default: true,
   },
   withProfile: {
     type: Boolean,

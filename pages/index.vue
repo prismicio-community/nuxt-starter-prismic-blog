@@ -10,15 +10,10 @@ const { data: articles } = useAsyncData('$articles', () =>
 )
 const settings = useSettings()
 
-const {
-  withHeaderProfile,
-  withHeaderDivider,
-  withFooterSignUpForm
-} = useLayout()
-onMounted(() => {
-  withHeaderProfile.value = true
-  withHeaderDivider.value = false
-  withFooterSignUpForm.value = true
+definePageMeta({
+  withHeaderProfile: true,
+  withHeaderDivider: false,
+  withFooterSignUpForm: true
 })
 
 useHead({

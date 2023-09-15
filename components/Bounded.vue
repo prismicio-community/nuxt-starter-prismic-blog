@@ -1,7 +1,7 @@
 <script setup lang="ts">
 defineProps({
   as: {
-    type: [String, Object, Function],
+    type: [String, Object],
     default: 'div'
   },
   size: {

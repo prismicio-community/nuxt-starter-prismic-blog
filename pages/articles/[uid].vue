@@ -27,15 +27,10 @@ const { data: latestArticles } = useAsyncData('$latestArticles', () =>
 
 const settings = useSettings()
 
-const {
-  withHeaderProfile,
-  withHeaderDivider,
-  withFooterSignUpForm
-} = useLayout()
-onMounted(() => {
-  withHeaderProfile.value = false
-  withHeaderDivider.value = false
-  withFooterSignUpForm.value = true
+definePageMeta({
+  withHeaderProfile: false,
+  withHeaderDivider: false,
+  withFooterSignUpForm: true
 })
 
 useHead({
@@ -43,8 +38,6 @@ useHead({
 })
 
 const formatDate = (article: Content.ArticleDocument | null) => {
-  // TODO: Remove when fixed
-  // @ts-expect-error Fixed in upcoming version
   const date = prismic.asDate(article?.data.publishDate || article?.first_publication_date)
 
   return dateFormatter.format(date || undefined)

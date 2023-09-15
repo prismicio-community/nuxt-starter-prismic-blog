@@ -28,8 +28,6 @@ const featuredImage = computed(() => {
 })
 
 const formattedDate = computed(() => {
-  // TODO: Remove when fixed
-  // @ts-expect-error Fixed in upcoming version
   const date = prismic.asDate(props.article.data.publishDate || props.article.first_publication_date)
 
   return dateFormatter.format(date || undefined)

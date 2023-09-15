@@ -1,18 +1,18 @@
 <script setup lang="ts">
-import { RichTextField } from '@prismicio/client'
+import { RichTextField, ImageField } from '@prismicio/client'
 
 defineProps({
   name: {
     type: Object as PropType<RichTextField>,
-    required: true
+    default: undefined
   },
   description: {
     type: Object as PropType<RichTextField>,
-    required: true
+    default: undefined
   },
   profilePicture: {
-    type: Object,
-    required: true
+    type: Object as PropType<ImageField>,
+    default: undefined
   }
 })
 </script>
@@ -26,7 +26,7 @@ defineProps({
       >
         <div class="relative h-40 w-40 overflow-hidden rounded-full bg-slate-300">
           <PrismicImage
-            v-if="profilePicture.url"
+            v-if="profilePicture?.url"
             :field="profilePicture"
             class="object-cover"
           />

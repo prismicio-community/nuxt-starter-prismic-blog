@@ -1,9 +1,5 @@
 <script setup lang="ts">
-const {
-  withHeaderProfile,
-  withHeaderDivider,
-  withFooterSignUpForm
-} = useLayout()
+const route = useRoute()
 </script>
 
 <template>
@@ -33,10 +29,10 @@ const {
       </div>
     </DevOnly>
     <Header
-      :with-profile="withHeaderProfile"
-      :with-divider="withHeaderDivider"
+      :with-profile="route.meta.withHeaderProfile"
+      :with-divider="route.meta.withHeaderDivider"
     />
     <slot />
-    <Footer :with-sign-up-form="withFooterSignUpForm" />
+    <Footer :with-sign-up-form="route.meta.withFooterSignUpForm" />
   </div>
 </template>

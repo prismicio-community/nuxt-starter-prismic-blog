@@ -3,20 +3,15 @@ import { components } from '~/slices'
 
 const prismic = usePrismic()
 const route = useRoute()
-const { data: page } = useAsyncData(route.params.uid, () =>
+const { data: page } = useAsyncData(route.params.uid as string, () =>
   prismic.client.getByUID('page', route.params.uid as string)
 )
 const settings = useSettings()
 
-const {
-  withHeaderProfile,
-  withHeaderDivider,
-  withFooterSignUpForm
-} = useLayout()
-onMounted(() => {
-  withHeaderProfile.value = true
-  withHeaderDivider.value = true
-  withFooterSignUpForm.value = true
+definePageMeta({
+  withHeaderProfile: true,
+  withHeaderDivider: true,
+  withFooterSignUpForm: true
 })
 
 useHead({
