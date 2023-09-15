@@ -57,8 +57,11 @@ export default defineNuxtConfig({
   },
 
   hooks: {
-    ready(nuxt) {
-      console.log(nuxt.options)
+    "nitro:config": (config) => {
+      console.log(config)
+    },
+    "nitro:init": (nitro) => {
+      console.log(nitro.options)
     }
   },
 
