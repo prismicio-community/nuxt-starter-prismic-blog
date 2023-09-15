@@ -1,3 +1,0 @@
-{
-  "buildCommand": "nuxt generate && ls .vercel/output/static && cat .vercel/output/config.json"
-}

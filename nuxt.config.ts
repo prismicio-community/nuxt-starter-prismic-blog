@@ -56,22 +56,6 @@ export default defineNuxtConfig({
     }
   },
 
-  hooks: {
-    "nitro:config": (config) => {
-      console.log("nitro:config")
-      console.log(config)
-      console.log(globalThis.process?.env)
-    },
-    "nitro:init": (nitro) => {
-      console.log("nitro:init")
-      console.log(nitro.options)
-    },
-    "ready": (nuxt) => {
-      console.log("ready")
-      console.log(nuxt.options)
-    }
-  },
-
   tailwindcss: {
     config: {
       content: [
