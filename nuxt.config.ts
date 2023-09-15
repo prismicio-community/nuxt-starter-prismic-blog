@@ -56,6 +56,12 @@ export default defineNuxtConfig({
     }
   },
 
+  hooks: {
+    ready(nuxt) {
+      console.log(nuxt.options)
+    }
+  },
+
   tailwindcss: {
     config: {
       content: [
