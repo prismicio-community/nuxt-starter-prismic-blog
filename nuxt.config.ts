@@ -59,6 +59,7 @@ export default defineNuxtConfig({
   hooks: {
     "nitro:config": (config) => {
       console.log(config)
+      console.log(globalThis.process?.env)
     },
     "nitro:init": (nitro) => {
       console.log(nitro.options)
