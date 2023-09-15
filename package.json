@@ -19,6 +19,7 @@
     "@fontsource/libre-baskerville": "^5.0.8"
   },
   "devDependencies": {
+    "@nuxt/devtools": "^0.8.3",
     "@nuxt/eslint-config": "^0.2.0",
     "@nuxtjs/prismic": "^3.0.1",
     "@nuxtjs/tailwindcss": "^6.8.0",
