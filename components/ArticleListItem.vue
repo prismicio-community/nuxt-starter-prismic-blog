@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { Content } from '@prismicio/client'
+import { type Content } from '@prismicio/client'
 
 const props = defineProps({
   article: {

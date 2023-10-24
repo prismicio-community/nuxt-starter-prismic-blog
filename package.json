@@ -15,19 +15,19 @@
     "lint": "eslint ."
   },
   "dependencies": {
-    "@fontsource/inter": "^5.0.8",
+    "@fontsource/inter": "^5.0.15",
     "@fontsource/libre-baskerville": "^5.0.8"
   },
   "devDependencies": {
-    "@nuxt/devtools": "^0.8.5",
+    "@nuxt/devtools": "^1.0.0",
     "@nuxt/eslint-config": "^0.2.0",
-    "@nuxtjs/prismic": "^3.0.3",
+    "@nuxtjs/prismic": "^3.1.0",
     "@nuxtjs/tailwindcss": "^6.8.0",
-    "@slicemachine/adapter-nuxt": "^0.3.17",
+    "@slicemachine/adapter-nuxt": "^0.3.21",
     "@tailwindcss/aspect-ratio": "^0.4.2",
-    "concurrently": "^8.2.1",
-    "eslint": "^8.50.0",
-    "nuxt": "^3.7.4",
-    "slice-machine-ui": "^1.14.1"
+    "concurrently": "^8.2.2",
+    "eslint": "^8.52.0",
+    "nuxt": "^3.8.0",
+    "slice-machine-ui": "^1.18.0"
   }
 }
