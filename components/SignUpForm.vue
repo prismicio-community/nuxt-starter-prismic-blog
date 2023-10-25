@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { HTMLRichTextMapSerializer } from '@prismicio/client';
+import { type HTMLRichTextMapSerializer } from '@prismicio/client';
 
 const settings = useSettings()
 
