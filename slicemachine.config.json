@@ -1,6 +1,6 @@
 {
   "libraries": [
-    "./slices"
+    "./app/slices"
   ],
   "adapter": "@slicemachine/adapter-nuxt",
   "repositoryName": "nextjs-starter-prismic-blog",
