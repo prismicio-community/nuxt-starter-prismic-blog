@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { type Content } from '@prismicio/client'
+import type { Content } from '@prismicio/client'
 
 import { components } from '~/slices'
 
@@ -12,7 +12,7 @@ const dateFormatter = new Intl.DateTimeFormat('en-US', {
 const prismic = usePrismic()
 const route = useRoute()
 
-const { data: article } = useAsyncData(`articles/${route.params.uid}`, () =>
+const { data: article } = await useAsyncData(`articles/${route.params.uid}`, () =>
   prismic.client.getByUID('article', route.params.uid as string)
 )
 const { data: latestArticles } = useAsyncData('$latestArticles', () =>
@@ -61,7 +61,8 @@ const formatDate = (article: Content.ArticleDocument | null) => {
           wrapper="h1"
           class="mb-3 text-3xl font-semibold tracking-tighter text-slate-800 md:text-4xl"
         />
-        <p class="font-serif italic tracking-tighter text-slate-500">
+        <p 
+        v-if="article" class="font-serif italic tracking-tighter text-slate-500">
           {{ formatDate(article) }}
         </p>
       </Bounded>
