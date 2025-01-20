@@ -87,7 +87,7 @@ const formatDate = (article: Content.ArticleDocument | null) => {
               :key="latestArticle.id"
             >
               <h1 class="mb-3 text-3xl font-semibold tracking-tighter text-slate-800 md:text-4xl">
-                <PrismicLink :field="latestArticle">
+                <PrismicLink :document="latestArticle">
                   {{ $prismic.asText(latestArticle.data.title) }}
                 </PrismicLink>
               </h1>

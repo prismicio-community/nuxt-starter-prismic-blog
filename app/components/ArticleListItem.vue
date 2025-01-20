@@ -52,7 +52,7 @@ const excerpt = computed(() => {
     class="grid grid-cols-1 items-start gap-6 md:grid-cols-3 md:gap-8"
   >
     <PrismicLink
-      :field="article"
+      :document="article"
       tab-index="-1"
     >
       <div class="aspect-w-4 aspect-h-3 relative bg-gray-100">
@@ -65,7 +65,7 @@ const excerpt = computed(() => {
     </PrismicLink>
     <div class="grid grid-cols-1 gap-3 md:col-span-2">
       <Heading as="h2">
-        <PrismicLink :field="article">
+        <PrismicLink :document="article">
           {{ $prismic.asText(article.data.title) }}
         </PrismicLink>
       </Heading>
