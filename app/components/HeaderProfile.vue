@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { type RichTextField, type ImageField } from '@prismicio/client'
+import type { RichTextField, ImageField } from '@prismicio/client'
 
 defineProps({
   name: {

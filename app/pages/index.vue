@@ -1,6 +1,6 @@
 <script setup lang="ts">
 const prismic = usePrismic()
-const { data: articles } = useAsyncData('$articles', () =>
+const { data: articles } = await useAsyncData('$articles', () =>
   prismic.client.getAllByType("article", {
     orderings: [
       { field: "my.article.publishDate", direction: "desc" },
