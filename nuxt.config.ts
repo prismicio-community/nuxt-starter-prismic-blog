@@ -44,7 +44,7 @@ export default defineNuxtConfig({
   ],
 
   prismic: {
-    endpoint: repositoryName,
+endpoint: 'https://luxelifedigest.cdn.prismic.io/api/v2',
     preview: '/api/preview',
     clientConfig: {
       routes: [
