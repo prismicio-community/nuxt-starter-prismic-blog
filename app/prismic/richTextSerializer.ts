@@ -21,8 +21,10 @@ const serializer: HTMLRichTextMapSerializer = {
     /* html */ `<pre class="mb-7 rounded bg-slate-100 p-4 text-sm last:mb-0 md:p-8 md:text-lg"><code>${children}</code></pre>`,
   strong: ({ children }) =>
     /* html */ `<strong class="font-semibold">${children}</strong>`,
-  hyperlink: ({ children, node }) =>
-    /* html */`<a href="${node.data.url}" class="underline decoration-1 underline-offset-2">${children}</a>`
+  hyperlink: ({ children, node }) => {
+    const target = node.data.target === '_blank' ? ' target="_blank" rel="noopener noreferrer"' : '';
+    return /* html */`<a href="${node.data.url}" class="underline decoration-1 underline-offset-2"${target}>${children}</a>`;
+  }
 }
 
 export default serializer;
