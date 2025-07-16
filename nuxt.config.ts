@@ -2,10 +2,6 @@ import { repositoryName } from './slicemachine.config.json'
 
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
-  future: {
-    compatibilityVersion: 4
-  },
-
   devtools: { enabled: true },
 
   app: {
@@ -18,7 +14,6 @@ export default defineNuxtConfig({
         { charset: 'utf-8' },
         { name: 'viewport', content: 'width=device-width, initial-scale=1' },
         {
-          hid: 'description',
           name: 'description',
           content: 'Prismic + Nuxt blog example'
         },
@@ -60,5 +55,5 @@ export default defineNuxtConfig({
     }
   },
 
-  compatibilityDate: '2025-01-06',
+  compatibilityDate: '2025-07-16',
 })
