@@ -6,11 +6,11 @@ defineProps(getSliceComponentProps<Content.TextSlice>());
 
 <template>
   <Bounded as="section">
-    <PrismicRichText
+    <div
       v-if="$prismic.isFilled.richText(slice.primary.text)"
       class="font-serif leading-relaxed md:text-xl md:leading-relaxed"
-      :field="slice.primary.text"
-      wrapper="div"
-    />
+    >
+      <PrismicRichText :field="slice.primary.text" />
+    </div>
   </Bounded>
 </template>
