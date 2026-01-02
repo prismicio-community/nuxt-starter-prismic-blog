@@ -22,7 +22,7 @@ const serializer: HTMLRichTextMapSerializer = {
       class="grid w-full max-w-xl grid-cols-1 gap-6"
     >
       <PrismicRichText
-        v-if="$prismic.asText(settings?.data.newsletterDescription)"
+        v-if="$prismic.isFilled.richText(settings?.data.newsletterDescription)"
         :field="settings?.data.newsletterDescription"
         :html-serializer="serializer"
         wrapper="div"
@@ -48,12 +48,12 @@ const serializer: HTMLRichTextMapSerializer = {
             <span aria-hidden="true">&rarr;</span>
           </button>
         </div>
-        <PrismicText
-          v-if="$prismic.asText(settings?.data.newsletterDisclaimer)"
+        <p
+          v-if="$prismic.isFilled.richText(settings?.data.newsletterDisclaimer)"
           class="text-center text-xs tracking-tight text-slate-500"
-          :field="settings?.data.newsletterDisclaimer"
-          wrapper="p"
-        />
+        >
+          <PrismicText :field="settings?.data.newsletterDisclaimer" />
+        </p>
       </div>
     </form>
   </div>

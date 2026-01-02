@@ -1,7 +1,9 @@
 <script setup lang="ts">
-const prismic = usePrismic()
+import { asText } from '@prismicio/client'
+
+const { client } = usePrismic()
 const { data: articles } = await useAsyncData('$articles', () =>
-  prismic.client.getAllByType("article", {
+  client.getAllByType("article", {
     orderings: [
       { field: "my.article.publishDate", direction: "desc" },
       { field: "document.first_publication_date", direction: "desc" },
@@ -17,7 +19,7 @@ definePageMeta({
 })
 
 useHead({
-  title: computed(() => prismic.asText(settings.value?.data.name))
+  title: computed(() => asText(settings.value?.data.name))
 })
 </script>
 

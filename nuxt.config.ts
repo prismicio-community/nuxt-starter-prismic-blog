@@ -43,17 +43,11 @@ export default defineNuxtConfig({
     preview: '/api/preview',
     clientConfig: {
       routes: [
-        {
-          type: "page",
-          path: "/:uid",
-        },
-        {
-          type: "article",
-          path: "/articles/:uid",
-        },
+        { type: "page", path: "/:uid" },
+        { type: "article", path: "/articles/:uid" }
       ]
     }
   },
 
-  compatibilityDate: '2025-07-16',
+  compatibilityDate: '2026-01-02',
 })

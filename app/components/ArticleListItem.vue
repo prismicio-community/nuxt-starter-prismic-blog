@@ -1,5 +1,6 @@
 <script setup lang="ts">
 import type { Content } from '@prismicio/client'
+import { asDate, asText } from '@prismicio/client'
 
 const props = defineProps({
   article: {
@@ -13,7 +14,6 @@ const dateFormatter = new Intl.DateTimeFormat('en-US', {
   day: 'numeric',
   year: 'numeric'
 })
-const prismic = usePrismic()
 
 const featuredImage = computed(() => {
   if (props.article.data.featuredImage.url) {
@@ -28,7 +28,7 @@ const featuredImage = computed(() => {
 })
 
 const formattedDate = computed(() => {
-  const date = prismic.asDate(props.article.data.publishDate || props.article.first_publication_date)
+  const date = asDate(props.article.data.publishDate || props.article.first_publication_date)
 
   return dateFormatter.format(date || undefined)
 })
@@ -36,7 +36,7 @@ const formattedDate = computed(() => {
 const excerpt = computed(() => {
   const text = props.article.data.slices
     .filter(slice => slice.slice_type === 'text')
-    .map((slice) => prismic.asText((slice as Content.TextSlice).primary.text))
+    .map((slice) => asText((slice as Content.TextSlice).primary.text))
     .join(' ')
   const excerpt = text.substring(0, 300)
   if (text.length > 300) {
@@ -66,7 +66,7 @@ const excerpt = computed(() => {
     <div class="grid grid-cols-1 gap-3 md:col-span-2">
       <Heading as="h2">
         <PrismicLink :document="article">
-          {{ $prismic.asText(article.data.title) }}
+          <PrismicText :field="article.data.title" />
         </PrismicLink>
       </Heading>
       <p class="font-serif italic tracking-tighter text-slate-500">

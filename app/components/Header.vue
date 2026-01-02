@@ -21,15 +21,15 @@ const settings = useSettings()
         <ul class="flex flex-wrap justify-center gap-10">
           <HeaderNavItem>
             <NuxtLink to="/">
-              {{ $prismic.asText(navigation?.data.homepageLabel) }}
+              <PrismicText :field="navigation?.data.homepageLabel" />
             </NuxtLink>
           </HeaderNavItem>
           <HeaderNavItem
             v-for="item in navigation?.data.links"
-            :key="$prismic.asText(item.label)"
+            :key="JSON.stringify(item.label)"
           >
             <PrismicLink :field="item.link">
-              {{ $prismic.asText(item.label) }}
+              <PrismicText :field="item.label" />
             </PrismicLink>
           </HeaderNavItem>
         </ul>

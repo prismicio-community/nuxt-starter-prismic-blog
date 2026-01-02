@@ -1,5 +1,6 @@
 <script setup lang="ts">
 import type { Content } from '@prismicio/client'
+import { asText, asDate } from '@prismicio/client'
 
 import { components } from '~/slices'
 
@@ -9,14 +10,14 @@ const dateFormatter = new Intl.DateTimeFormat('en-US', {
   year: 'numeric'
 })
 
-const prismic = usePrismic()
+const { client } = usePrismic()
 const route = useRoute()
 
 const { data: article } = await useAsyncData(`articles/${route.params.uid}`, () =>
-  prismic.client.getByUID('article', route.params.uid as string)
+  client.getByUID('article', route.params.uid as string)
 )
 const { data: latestArticles } = useAsyncData('$latestArticles', () =>
-  prismic.client.getAllByType("article", {
+  client.getAllByType("article", {
     limit: 3,
     orderings: [
       { field: "my.article.publishDate", direction: "desc" },
@@ -34,11 +35,11 @@ definePageMeta({
 })
 
 useHead({
-  title: computed(() => `${prismic.asText(article.value?.data.title)} | ${prismic.asText(settings.value?.data.name)}`)
+  title: computed(() => `${asText(article.value?.data.title)} | ${asText(settings.value?.data.name)}`)
 })
 
 const formatDate = (article: Content.ArticleDocument | null) => {
-  const date = prismic.asDate(article?.data.publishDate || article?.first_publication_date)
+  const date = asDate(article?.data.publishDate || article?.first_publication_date)
 
   return dateFormatter.format(date || undefined)
 }
@@ -56,13 +57,10 @@ const formatDate = (article: Content.ArticleDocument | null) => {
     </Bounded>
     <article>
       <Bounded class="pb-0">
-        <PrismicText
-          :field="article?.data.title"
-          wrapper="h1"
-          class="mb-3 text-3xl font-semibold tracking-tighter text-slate-800 md:text-4xl"
-        />
-        <p 
-        v-if="article" class="font-serif italic tracking-tighter text-slate-500">
+        <h1 class="mb-3 text-3xl font-semibold tracking-tighter text-slate-800 md:text-4xl">
+          <PrismicText :field="article?.data.title" />
+        </h1>
+        <p v-if="article" class="font-serif italic tracking-tighter text-slate-500">
           {{ formatDate(article) }}
         </p>
       </Bounded>
@@ -88,7 +86,7 @@ const formatDate = (article: Content.ArticleDocument | null) => {
             >
               <h1 class="mb-3 text-3xl font-semibold tracking-tighter text-slate-800 md:text-4xl">
                 <PrismicLink :document="latestArticle">
-                  {{ $prismic.asText(latestArticle.data.title) }}
+                  <PrismicText :field="latestArticle.data.title" />
                 </PrismicLink>
               </h1>
               <p class="font-serif italic tracking-tighter text-slate-500">

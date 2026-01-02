@@ -1,4 +1,4 @@
 export const useSettings = () => {
-  const prismic = usePrismic()
-  return useAsyncData('$settings', () => prismic.client.getSingle('settings')).data
+  const { client } = usePrismic()
+  return useAsyncData('$settings', () => client.getSingle('settings')).data
 }

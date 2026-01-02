@@ -42,7 +42,7 @@ To learn more about working with Prismic, [**see the Prismic docs**][prismic-doc
 ## License
 
 ```
-Copyright 2013-2023 Prismic <contact@prismic.io> (https://prismic.io)
+Copyright 2013-2026 Prismic <contact@prismic.io> (https://prismic.io)
 
 Licensed under the Apache License, Version 2.0 (the "License");
 you may not use this file except in compliance with the License.
@@ -58,7 +58,7 @@ limitations under the License.
 ```
 
 [prismic]: https://prismic.io
-[prismic-docs]: https://prismic.io/docs/nuxt-3-setup
+[prismic-docs]: https://prismic.io/docs/nuxt
 [prismic-sign-up]: https://prismic.io/dashboard/signup
 [starter-docs]: ./docs/README.md
 [nuxt]: https://nuxt.com

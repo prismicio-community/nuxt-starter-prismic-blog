@@ -33,20 +33,20 @@ defineProps({
         </div>
       </NuxtLink>
       <div
-        v-if="$prismic.asText(name) || $prismic.asText(description)"
+        v-if="$prismic.isFilled.richText(name) || $prismic.isFilled.richText(description)"
         class="grid grid-cols-1 gap-2 text-center"
       >
-        <Heading v-if="$prismic.asText(name)">
+        <Heading v-if="$prismic.isFilled.richText(name)">
           <NuxtLink to="/">
-            {{ $prismic.asText(name) }}
+            <PrismicText :field="name" />
           </NuxtLink>
         </Heading>
-        <PrismicText
-          v-if="$prismic.asText(description)"
-          :field="description"
-          wrapper="p"
+        <p
+          v-if="$prismic.isFilled.richText(description)"
           class="font-serif text-2xl italic leading-normal tracking-tight text-slate-500"
-        />
+        >
+          <PrismicText :field="description" />
+        </p>
       </div>
     </div>
   </div>

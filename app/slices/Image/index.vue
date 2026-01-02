@@ -1,11 +1,7 @@
 <script setup lang="ts">
 import type { Content } from '@prismicio/client'
 
-// The array passed to \`getSliceComponentProps\` is purely optional.
-// Consider it as a visual hint for you when templating your slice.
-defineProps(getSliceComponentProps<Content.ImageSlice>(
-  ['slice', 'index', 'slices', 'context']
-));
+defineProps(getSliceComponentProps<Content.ImageSlice>());
 </script>
 
 <template>
@@ -25,7 +21,7 @@ defineProps(getSliceComponentProps<Content.ImageSlice>(
         />
       </div>
       <PrismicRichText
-        v-if="$prismic.asText(slice.primary.caption)"
+        v-if="$prismic.isFilled.richText(slice.primary.caption)"
         :field="slice.primary.caption"
         wrapper="figcaption"
         class="text-center font-serif italic tracking-tight text-slate-500"
