@@ -20,12 +20,12 @@ defineProps(getSliceComponentProps<Content.ImageSlice>());
           :height="slice.primary.image.dimensions.height"
         />
       </div>
-      <PrismicRichText
+      <figcaption
         v-if="$prismic.isFilled.richText(slice.primary.caption)"
-        :field="slice.primary.caption"
-        wrapper="figcaption"
         class="text-center font-serif italic tracking-tight text-slate-500"
-      />
+      >
+        <PrismicRichText :field="slice.primary.caption" />
+      </figcaption>
     </figure>
   </Bounded>
 </template>
