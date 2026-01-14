@@ -17,11 +17,11 @@
   "dependencies": {
     "@fontsource/inter": "^5.2.8",
     "@fontsource/libre-baskerville": "^5.2.10",
-    "@prismicio/client": "^7.21.2"
+    "@prismicio/client": "^7.21.3"
   },
   "devDependencies": {
     "@nuxt/eslint": "^1.12.1",
-    "@nuxtjs/prismic": "^5.0.0",
+    "@nuxtjs/prismic": "^5.1.0",
     "@nuxtjs/tailwindcss": "^6.14.0",
     "@slicemachine/adapter-nuxt": "^0.3.93",
     "@tailwindcss/aspect-ratio": "^0.4.2",
